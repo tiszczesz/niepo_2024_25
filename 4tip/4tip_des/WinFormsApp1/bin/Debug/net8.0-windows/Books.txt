@@ -1,0 +1,24 @@
+Programowanie w c#
+Andrzej Nowak
+2023
+90.00
+
+Zwierzęta Polski
+Monika Nowak
+2024
+56.99
+
+Wstęp do ogólnej teorii...
+Roman Boman
+2019
+34.89
+
+Atlas Świata
+Renata Sałata
+2023
+24.79
+
+Wakacje w Krakowie
+Tomasz Tułacz
+2021
+45.99
