@@ -6,4 +6,6 @@ var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
 app.MapGet("/movies", () => repo.GetMovies());
+
+//brak nuget package sqlite
 app.Run();
