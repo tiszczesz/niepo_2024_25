@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{E7EEDC1B-A700-4620-878B-2C57A4B26F71}|WinFormsApp1.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7EEDC1B-A700-4620-878B-2C57A4B26F71}|WinFormsApp1.csproj|e:\\tools\\github\\niepo_2024_25\\4tip\\4tip_des\\winformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E7EEDC1B-A700-4620-878B-2C57A4B26F71}|WinFormsApp1.csproj|E:\\tools\\GitHub\\niepo_2024_25\\4tip\\4tip_des\\WinFormsApp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E7EEDC1B-A700-4620-878B-2C57A4B26F71}|WinFormsApp1.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -58,8 +58,7 @@
               "RelativeToolTip": "Form1.Designer.cs",
               "ViewState": "AgIAAEsAAAAAAAAAAAAUwE8AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-05T12:32:12.867Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-05T12:32:12.867Z"
             },
             {
               "$type": "Document",
@@ -71,8 +70,7 @@
               "RelativeToolTip": "Books.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-09-05T12:10:37.629Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-05T12:10:37.629Z"
             },
             {
               "$type": "Document",
@@ -82,7 +80,7 @@
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "E:\\tools\\GitHub\\niepo_2024_25\\4tip\\4tip_des\\WinFormsApp1\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAD4vxkAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAD4vxoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-04T11:33:02.103Z",
               "EditorCaption": ""
@@ -97,8 +95,7 @@
               "RelativeToolTip": "Models\\BooksRepo.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T11:19:23.725Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-04T11:19:23.725Z"
             },
             {
               "$type": "Document",
@@ -110,8 +107,7 @@
               "RelativeToolTip": "Models\\Book.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAlwBgAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T11:17:51.844Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-04T11:17:51.844Z"
             }
           ]
         }
