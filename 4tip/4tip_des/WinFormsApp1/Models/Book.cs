@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,8 +21,8 @@ namespace WinFormsApp1.Models
                 {
                     Title = books[0],
                     Author = books[1],
-                    Price = Convert.ToDecimal(books[2]),
-                    Year = Convert.ToInt32(books[3])
+                    Price = Convert.ToDecimal(books[3],CultureInfo.InvariantCulture),
+                    Year = Convert.ToInt32(books[2])
                 };
                 return book;
             }
