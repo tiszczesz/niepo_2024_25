@@ -52,6 +52,10 @@ vector<Song> GetSongs(const vector<string>& lines) {
 int main() {
 	vector<string> lines = GetLinesFromFile("Data.txt");
 	vector<Song> songs = GetSongs(lines);
+	for (auto song : songs)
+	{
+		song.ShowSong();
+	}
 	//GenerFile("text.txt");
 	return 0;
 }

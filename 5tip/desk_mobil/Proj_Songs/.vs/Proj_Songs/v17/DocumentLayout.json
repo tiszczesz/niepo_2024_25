@@ -3,9 +3,6 @@
   "WorkspaceRootPath": "E:\\tools\\GitHub\\niepo_2024_25\\5tip\\desk_mobil\\Proj_Songs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{28A97148-B854-4881-8E41-1A12239EB95A}|Proj_Songs.vcxproj|E:\\download\\Data.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{28A97148-B854-4881-8E41-1A12239EB95A}|Proj_Songs.vcxproj|E:\\tools\\GitHub\\niepo_2024_25\\5tip\\desk_mobil\\Proj_Songs\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{28A97148-B854-4881-8E41-1A12239EB95A}|Proj_Songs.vcxproj|solutionrelative:Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -24,17 +21,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Source.cpp",
               "DocumentMoniker": "E:\\tools\\GitHub\\niepo_2024_25\\5tip\\desk_mobil\\Proj_Songs\\Source.cpp",
               "RelativeDocumentMoniker": "Source.cpp",
               "ToolTip": "E:\\tools\\GitHub\\niepo_2024_25\\5tip\\desk_mobil\\Proj_Songs\\Source.cpp",
               "RelativeToolTip": "Source.cpp",
-              "ViewState": "AgIAACgAAAAAAAAAAIAwwDcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAApwDwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-06T10:56:40.243Z",
               "IsPinned": true,
@@ -42,31 +39,17 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Data.txt",
-              "DocumentMoniker": "E:\\download\\Data.txt",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\download\\Data.txt",
-              "ToolTip": "E:\\download\\Data.txt",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\download\\Data.txt",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-09-06T12:20:17.038Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "string",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\string",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\string",
               "ViewState": "AgIAAFYAAAAAAAAAAIAwwF8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-09-06T12:15:22.605Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-06T12:15:22.605Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Song.h",
               "DocumentMoniker": "E:\\tools\\GitHub\\niepo_2024_25\\5tip\\desk_mobil\\Proj_Songs\\Song.h",
               "RelativeDocumentMoniker": "Song.h",
@@ -74,8 +57,7 @@
               "RelativeToolTip": "Song.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-06T11:15:43.888Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-06T11:15:43.888Z"
             }
           ]
         }
