@@ -1,4 +1,4 @@
-﻿
+﻿@model List<cw1_empty.Models.Movie>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Index</h1>
+    <h1>Lista filmów</h1>
+    <table>
+        <tr>
+            <th>Tytuł</th>
+            <th>Reżyser</th>
+            <th>Rok produkcji</th>
+        </tr>
+        @foreach(var movie in Model){
+            <tr>
+                <td>@movie.Title</td>
+                <td>@movie.Director</td>
+                <td>@movie.Year</td>
+            </tr>
+        }
+    </table>
 </body>
 </html>
