@@ -8,4 +8,8 @@ public class Person{
     public void Hello(){
         Console.WriteLine("Hello jestem " + firstname + " " + lastname);
     }
+
+    public override string ToString(){
+        return firstname + " " + lastname + " wiek " + age ;
+    }
 }
