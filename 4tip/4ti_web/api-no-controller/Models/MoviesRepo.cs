@@ -30,4 +30,23 @@ public class MoviesRepo
         conn.Close();
         return movies;
     }
+
+    public Movie? GetMovieById(int id)
+    {
+         using var conn = new SqliteConnection(_connectionString);
+        SqliteCommand cmd = conn.CreateCommand();
+        cmd.CommandText = $"SELECT * FROM Movies WHERE Id = {id}";
+        conn.Open();
+        SqliteDataReader reader = cmd.ExecuteReader();
+        if(!reader.HasRows) return null;
+        reader.Read();
+        var movie = new Movie{
+            Id = reader.GetInt32(0),
+            Title = reader.GetString(1),
+            Director = reader.GetString(2),
+            Year = reader.GetString(3)
+        };
+        conn.Close();
+        return movie;
+    }
 }
