@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\tools\\GitHub\\niepo_2024_25\\2tip_cpp\\cw1\\",
+  "WorkspaceRootPath": "E:\\tools\\GitHub\\niepo_2024_25\\2tip\\2tip_cpp\\cw1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C6B7F0B6-F14B-41E6-9C86-711FB1E51493}|cw1.vcxproj|E:\\tools\\GitHub\\niepo_2024_25\\2tip_cpp\\cw1\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{C6B7F0B6-F14B-41E6-9C86-711FB1E51493}|cw1.vcxproj|E:\\tools\\GitHub\\niepo_2024_25\\2tip\\2tip_cpp\\cw1\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C6B7F0B6-F14B-41E6-9C86-711FB1E51493}|cw1.vcxproj|solutionrelative:Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -20,9 +20,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Source.cpp",
-              "DocumentMoniker": "E:\\tools\\GitHub\\niepo_2024_25\\2tip_cpp\\cw1\\Source.cpp",
+              "DocumentMoniker": "E:\\tools\\GitHub\\niepo_2024_25\\2tip\\2tip_cpp\\cw1\\Source.cpp",
               "RelativeDocumentMoniker": "Source.cpp",
-              "ToolTip": "E:\\tools\\GitHub\\niepo_2024_25\\2tip_cpp\\cw1\\Source.cpp",
+              "ToolTip": "E:\\tools\\GitHub\\niepo_2024_25\\2tip\\2tip_cpp\\cw1\\Source.cpp",
               "RelativeToolTip": "Source.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",

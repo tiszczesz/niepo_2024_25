@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\tools\\GitHub\\niepo_2024_25\\2tip\\2tip_cpp\\cw3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6DD54237-B546-4658-8A62-39C916A6B1DD}|cw3.vcxproj|E:\\tools\\GitHub\\niepo_2024_25\\2tip\\2tip_cpp\\cw3\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DD54237-B546-4658-8A62-39C916A6B1DD}|cw3.vcxproj|solutionrelative:Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Source.cpp",
+              "DocumentMoniker": "E:\\tools\\GitHub\\niepo_2024_25\\2tip\\2tip_cpp\\cw3\\Source.cpp",
+              "RelativeDocumentMoniker": "Source.cpp",
+              "ToolTip": "E:\\tools\\GitHub\\niepo_2024_25\\2tip\\2tip_cpp\\cw3\\Source.cpp",
+              "RelativeToolTip": "Source.cpp",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-11T09:06:21.087Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
