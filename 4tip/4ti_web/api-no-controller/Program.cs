@@ -1,8 +1,16 @@
 using api_no_controller.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//cors
+builder.Services.AddCors(options =>{
+    options.AddPolicy("AllowAll", b => b.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
+});
+
 var repo = new MoviesRepo(builder.Configuration);
 var app = builder.Build();
+
+app.UseCors("AllowAll");
 
 app.MapGet("/", () => "Hello World!");
 app.MapGet("/movies", () => repo.GetMovies());
