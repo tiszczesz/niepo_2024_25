@@ -49,4 +49,39 @@ public class MoviesRepo
         conn.Close();
         return movie;
     }
+
+    public void AddMovie(Movie movie)
+    {
+        using var conn = new SqliteConnection(_connectionString);
+        SqliteCommand command = conn.CreateCommand();
+        command.CommandText =
+           "INSERT INTO Movies (Title, Director, Year) VALUES "
+                +$" ('{movie.Title}', '{movie.Director}', '{movie.Year}')";
+        conn.Open();
+        command.ExecuteNonQuery();
+        conn.Close();
+    }
+
+    public void DeleteMovie(int? id)
+    {
+        if(id==null) return;
+        using var conn = new SqliteConnection(_connectionString);
+        SqliteCommand command = conn.CreateCommand();
+        command.CommandText = $"DELETE FROM Movies WHERE Id = {id}";
+        conn.Open();
+        command.ExecuteNonQuery();
+        conn.Close();
+    }
+
+    public void UpdateMovie(int? id, Movie movie)
+    {
+        using (var conn = new SqliteConnection(_connectionString)){
+             SqliteCommand command = conn.CreateCommand();
+             command.CommandText = $"UPDATE Movies SET Title = '{movie.Title}',"
+                   +$" Director = '{movie.Director}', Year = '{movie.Year}' WHERE Id = {id}";
+             conn.Open();
+             command.ExecuteNonQuery();
+             conn.Close();
+        }       
+    }
 }
