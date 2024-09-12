@@ -11,9 +11,15 @@
 <body>
     <h1>Ćwiczenie 1</h1>
     <div id="root"></div>
+    <div id="root2"></div>
     <script>
         document.write("<h4>To jest JS w HTML</h4>");
         let root = document.querySelector("#root");
+        root.style.fontSize = "60px";
+        let root2 = document.querySelector("#root2");
+        root2.style.color = "red";
+        root.innerText = "<p>ala ma kota</p>";
+        root2.innerHTML = "<h2>ala ma kota</h2>";
         console.log(root);
     </script>
 </body>
