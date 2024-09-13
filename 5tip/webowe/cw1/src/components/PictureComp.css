@@ -1,6 +1,10 @@
-.picture{
-    border: solid 1px black;
-    box-shadow: 5px 5px 5px #888888;
-    padding: 5px;
-    border-radius: 5px;
+.picture {
+  border: solid 1px black;
+  box-shadow: 5px 5px 5px #888888;
+  padding: 5px;
+  border-radius: 5px;
+}
+.center {
+  margin: auto;
+  text-align: center;
 }
