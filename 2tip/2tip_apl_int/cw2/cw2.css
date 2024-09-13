@@ -2,3 +2,8 @@
     color: red;
     font-size: 0.8em;
 }
+#result{
+    border: solid 1px black;
+    padding: 10px;
+    display: none;
+}

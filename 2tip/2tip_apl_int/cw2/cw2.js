@@ -17,11 +17,26 @@ function cw1() {
 
 document.forms[0].addEventListener('submit', function (event) {
     event.preventDefault();
-    if (ValidateString(document.querySelector("#firstname")) ||
-        ValidateString(document.querySelector("#lastname"))) {
-            
+    let firstnameOK = ValidateString(document.querySelector("#firstname"));
+    let lastnameOK = ValidateString(document.querySelector("#lastname"));
+    let ageOK = ValidateAge(document.querySelector("#age"));
+    if (firstnameOK && lastnameOK && ageOK) {
+        //jak ok   
+        const person = { //json
+            firstname: document.querySelector("#firstname").value,
+            lastname: document.querySelector("#lastname").value,
+            age: parseInt(document.querySelector("#age").value),
+            show: function (elem) {
+                return `Imie: ${this.firstname}, nazwisko: ${this.lastname}, wiek: ${this.age}`
+            }
+        };
+        console.log(person);
+        const result = document.querySelector("#result");
+        result.innerHTML = person.show();
+        result.style.display = "block";
+    }else{
+        document.querySelector("#result").style.display = "none";
     }
-    const person = {};
 })
 function ValidateString(elem) {
     const next = elem.nextElementSibling;
@@ -31,5 +46,16 @@ function ValidateString(elem) {
     } else {
         next.innerHTML = "";
         return true;
+    }
+}
+function ValidateAge(elem) {
+    const next = elem.nextElementSibling;
+    let age = parseInt(elem.value.trim());
+    if (!isNaN(age) && age >= 1 && age <= 140) {
+        next.innerHTML = "";
+        return true;
+    } else {
+        next.innerHTML = "Wiek musi zawierać się w przedziale od 1 do 140";
+        return false;
     }
 }
