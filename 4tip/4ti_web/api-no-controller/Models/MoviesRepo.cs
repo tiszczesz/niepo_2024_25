@@ -3,7 +3,7 @@ using Microsoft.Data.Sqlite;
 
 namespace api_no_controller.Models;
 
-public class MoviesRepo
+public class MoviesRepo: IBooksRepo
 {
     private readonly string? _connectionString;
     public MoviesRepo(IConfiguration configuration)

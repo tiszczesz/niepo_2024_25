@@ -8,6 +8,7 @@ builder.Services.AddCors(options =>{
 });
 
 var repo = new MoviesRepo(builder.Configuration);
+//var repo = new MysqlBookRepo(builder.Configuration);
 var app = builder.Build();
 
 app.UseCors("AllowAll");
