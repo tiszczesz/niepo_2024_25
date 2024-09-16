@@ -19,3 +19,26 @@ function getGroups():array {
     $conn->close();//zamknięcie połączenia
     return $groups;
 }
+//napisać funkcję getGroupById($id) informacje o danej klasie
+function getGroupById(int $id ) : array {
+    $conn = getConnection();
+    if($conn==null) return [];
+    $sql = "SELECT * FROM groups WHERE id={$id}";
+    $result = $conn->query($sql);
+    $group = $result->fetch_row();
+    $conn->close();
+    return $group;    
+}
+//napisać funkcję getStudentsByGroupId(int $id) informacje o uczniach danej klasy
+function getStudentsByGroupId(int $id) : array {
+    $conn = getConnection();
+    if($conn==null) return [];
+    $sql = "SELECT * FROM students WHERE group_id={$id}";
+    $result = $conn->query($sql);
+    $students = [];
+    while($row = $result->fetch_row()){
+        $students[] = $row;
+    }
+    $conn->close();
+    return $students;
+}
