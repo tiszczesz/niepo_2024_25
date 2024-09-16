@@ -1,0 +1,19 @@
+Abc PHP 
+Andrzej Nowacki
+34.89
+2023
+
+Abc cpp 
+Andrzej Małecki
+22.89
+2024
+
+Zwierzęta podhala
+Monika Klika
+44.89
+2023
+
+Kuchnia Polska 
+Renata Sałata
+15.99
+2021

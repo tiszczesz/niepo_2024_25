@@ -1,0 +1,8 @@
+1. Zapisać z pliku do tablicy rekordów
+[
+    ["Abc PHP","Andrzej Nowacki","34.89","2023"],
+    ["Abc PHP","Andrzej Nowacki","34.89","2023"],
+    ["Abc PHP","Andrzej Nowacki","34.89","2023"],
+    ["Abc PHP","Andrzej Nowacki","34.89","2023"],
+    ["Abc PHP","Andrzej Nowacki","34.89","2023"],
+]
