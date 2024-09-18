@@ -27,5 +27,6 @@ void counter(int howMany , string text) {
 	}
 	cout << " BOOOMMMM!!!! " << endl;
 }
+
 //break
 //continue
