@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "E:\\tools\\GitHub\\niepo_2024_25\\4tip\\4tip_des\\WinFormsApp1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E7EEDC1B-A700-4620-878B-2C57A4B26F71}|WinFormsApp1.csproj|e:\\tools\\github\\niepo_2024_25\\4tip\\4tip_des\\winformsapp1\\books.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E7EEDC1B-A700-4620-878B-2C57A4B26F71}|WinFormsApp1.csproj|solutionrelative:books.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E7EEDC1B-A700-4620-878B-2C57A4B26F71}|WinFormsApp1.csproj|e:\\tools\\github\\niepo_2024_25\\4tip\\4tip_des\\winformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7EEDC1B-A700-4620-878B-2C57A4B26F71}|WinFormsApp1.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E7EEDC1B-A700-4620-878B-2C57A4B26F71}|WinFormsApp1.csproj|e:\\tools\\github\\niepo_2024_25\\4tip\\4tip_des\\winformsapp1\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7EEDC1B-A700-4620-878B-2C57A4B26F71}|WinFormsApp1.csproj|solutionrelative:models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7EEDC1B-A700-4620-878B-2C57A4B26F71}|WinFormsApp1.csproj|e:\\tools\\github\\niepo_2024_25\\4tip\\4tip_des\\winformsapp1\\books.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{E7EEDC1B-A700-4620-878B-2C57A4B26F71}|WinFormsApp1.csproj|solutionrelative:books.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,11 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "E:\\tools\\GitHub\\niepo_2024_25\\4tip\\4tip_des\\WinFormsApp1\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -50,7 +50,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "E:\\tools\\GitHub\\niepo_2024_25\\4tip\\4tip_des\\WinFormsApp1\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Form1.Designer.cs",
@@ -58,36 +58,38 @@
               "RelativeToolTip": "Form1.Designer.cs",
               "ViewState": "AgIAAEsAAAAAAAAAAAAUwE8AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-05T12:32:12.867Z"
+              "WhenOpened": "2024-09-05T12:32:12.867Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Books.txt",
               "DocumentMoniker": "E:\\tools\\GitHub\\niepo_2024_25\\4tip\\4tip_des\\WinFormsApp1\\Books.txt",
               "RelativeDocumentMoniker": "Books.txt",
               "ToolTip": "E:\\tools\\GitHub\\niepo_2024_25\\4tip\\4tip_des\\WinFormsApp1\\Books.txt",
               "RelativeToolTip": "Books.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-09-05T12:10:37.629Z"
+              "WhenOpened": "2024-09-05T12:10:37.629Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "E:\\tools\\GitHub\\niepo_2024_25\\4tip\\4tip_des\\WinFormsApp1\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "E:\\tools\\GitHub\\niepo_2024_25\\4tip\\4tip_des\\WinFormsApp1\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAlwB0AAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAArwBgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-04T11:33:02.103Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "BooksRepo.cs",
               "DocumentMoniker": "E:\\tools\\GitHub\\niepo_2024_25\\4tip\\4tip_des\\WinFormsApp1\\Models\\BooksRepo.cs",
               "RelativeDocumentMoniker": "Models\\BooksRepo.cs",
@@ -99,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Book.cs",
               "DocumentMoniker": "E:\\tools\\GitHub\\niepo_2024_25\\4tip\\4tip_des\\WinFormsApp1\\Models\\Book.cs",
               "RelativeDocumentMoniker": "Models\\Book.cs",

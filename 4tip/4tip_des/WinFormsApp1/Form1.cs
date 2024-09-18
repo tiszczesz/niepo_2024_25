@@ -21,6 +21,8 @@ namespace WinFormsApp1
             if (_books.Count > 0) {
                 counter = 0;
                 UpdateFormBook(_books[counter]);
+                pbCount.Maximum = _books.Count-1;
+                pbCount.Minimum = 0;
             }
 
         }
@@ -39,12 +41,16 @@ namespace WinFormsApp1
         {
             counter--;
             UpdateFormBook(_books[counter]);
+            pbCount.Value = counter;
         }
 
         private void btnInc_Click(object sender, EventArgs e)
         {
             counter++;
             UpdateFormBook(_books[counter]);
+            pbCount.Value = counter;
         }
+
+      
     }
 }

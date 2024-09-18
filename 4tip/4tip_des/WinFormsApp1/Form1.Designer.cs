@@ -39,6 +39,7 @@
             btnDec = new Button();
             btnInc = new Button();
             btnLoad = new Button();
+            pbCount = new ProgressBar();
             SuspendLayout();
             // 
             // label1
@@ -151,11 +152,19 @@
             btnLoad.UseVisualStyleBackColor = true;
             btnLoad.Click += btnLoad_Click;
             // 
+            // pbCount
+            // 
+            pbCount.Location = new Point(352, 335);
+            pbCount.Name = "pbCount";
+            pbCount.Size = new Size(355, 47);
+            pbCount.TabIndex = 11;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(pbCount);
             Controls.Add(btnLoad);
             Controls.Add(btnInc);
             Controls.Add(btnDec);
@@ -186,5 +195,6 @@
         private Button btnDec;
         private Button btnInc;
         private Button btnLoad;
+        private ProgressBar pbCount;
     }
 }
