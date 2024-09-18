@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>ćwiczenie 3-1</h1>
+    <script>
+        // const answer = confirm("Czy podoba Ci się ta strona?");
+        // if (answer === true) {
+        //     document.write("Dziękujemy za odpowiedź pozytywną");
+        //     document.body.style.backgroundColor = "green";
+        // } else {
+        //     window.location.href = "https://www.google.com";
+        // }
+        const answer = prompt("Podaj swoje imię");
+        console.log(answer);
+        if(answer !== null && answer.trim() !==""){
+            document.write("Witaj " + answer);
+        }else{
+            document.write("Szkoda, że nie chcesz się przedstawić");
+        }
+    </script>
+</body>
+
+</html>
