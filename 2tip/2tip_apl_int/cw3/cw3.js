@@ -55,9 +55,19 @@ console.log(movies);
 
 
 
-function generTabMovies(data, elem){
+function generTabMovies(data, elem) {
     const table = document.createElement("table");
     table.className = "table table-striped";
+    table.insertRow().innerHTML = "<th>Lp</th><th>Tytuł</th><th>Reżyser</th><th>Rok produkcji</th>";
+    let lp = 0;
+    for (const movie of data) {
+        const row = table.insertRow();
+        row.innerHTML = `<td>${++lp}</td>
+                        <td>${movie.title}</td>
+                       <td>${movie.director}</td>
+                       <td>${movie.year}</td>`;
+    }
+    elem.appendChild(table);
 }
 const elem = document.querySelector("#result");
-generTabMovies(movies,elem);
+generTabMovies(movies, elem);

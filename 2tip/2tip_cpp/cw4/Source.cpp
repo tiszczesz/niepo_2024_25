@@ -21,7 +21,8 @@ int main() {
 	cout << endl;
 	//deklaracja i inicjalizacja tablicy napisów
 	string napisy[] = { "Ala", "ma", "kota", "a", "kot" };
-	
+	for(auto napis : napisy)
+		cout << napis << " ";
 	return 0;
 
 }
