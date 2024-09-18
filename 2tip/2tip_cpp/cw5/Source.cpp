@@ -20,9 +20,19 @@ void ShowWords(string a[],int size) {
 // zwraca string najdluzsze slowo
 //napisac funkcje ktora przyjmuje tablice stringow i jej rozmiar
 // zwraca string najkrotsze slowo
+
+string getMaxLenth(string texts[], int size) {
+	string max = texts[0];
+	for (int i = 1; i < size; i++) {
+		if (texts[i].size() > max.size()) {
+			max = texts[i];
+		}
+	}
+	return max;
+}
 int main() {
 	string napisy[10] = { "ala","ma","kota","a","kot","ma"
-		,"roman","zofia","rudy","dzisiec" };
+		,"roman","zofia","rudy","dziesiec" };
 	ShowWords(napisy, 10);
 	/*string words[10];
 	for (int i = 0; i < 10; i++) {
