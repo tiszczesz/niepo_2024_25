@@ -9,6 +9,17 @@
     <!--Prosze napisać skrypt z prompt który 
     pyta o wiek jesli age<18 to przekierowanie onet.pl
     jesli age>=18 to napis witamy na stronie -->
-
+    <script>
+        let age = parseInt(prompt("Podaj wiek"));
+        if(isNaN(age)){
+            alert("Błędny wiek");
+            window.location.href = "https://onet.pl";
+        }
+        else if(age < 18){
+            window.location.href = "https://onet.pl";
+        }else{
+            document.write("Witamy na stronie");
+        }
+    </script>
 </body>
 </html>
