@@ -1,7 +1,8 @@
 using api_no_controller.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddScoped<IBooksRepo, MoviesRepo>();
+
+builder.Services.AddScoped<IBooksRepo, MoviesRepo>();//powiązanie interfejsu z klasą
 //builder.Services.AddScoped<IBooksRepo, MysqlBookRepo>();
 //cors
 builder.Services.AddCors(options =>{
