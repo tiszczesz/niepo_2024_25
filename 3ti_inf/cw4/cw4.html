@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Ćwiczenie 4</h1>
+    <script>
+        for (let i = 0; i < 5; i++) {
+            document.write(" i = " + i + "<br>");
+        }
+        document.write("<hr>");
+        for (let i = 10; i > 0; i--) {
+            document.write(" i = " + i + "<br>");
+        }
+        document.write("<hr>");
+        document.write("<ol>");
+        for (let i = 0; i < 5; i++) {
+            document.write("<li>Element listy " + i + "</li>");
+        }
+
+        document.write("</ol>");
+        //napisac petle ktora wygenruje 6 kolejnych znaczników
+        //h z numerem od 1 do 6 To jest nagłówek 1..6
+        for (let i = 1; i <= 6; i++) {
+            document.write("<h" + i + ">To jest nagłówek "
+                + i + "</h" + i + ">");
+        }
+        document.write("<select>");
+            for (let i = 1; i <= 5; i++) {
+                document.write("<option value='" 
+                  + i + "'>opcja numer " + i + "</option>");
+            }
+        document.write("</select>");
+        //napisać pętlę która wygeneruje select z 5 opcjami
+        // for(;;){}//nic nie robi nieskończona pętla
+    </script>
+    <!-- <select>
+        <option value="1">opcja numer 1</option>
+        <option value="2">opcja numer 2</option>
+        <option value="3">opcja numer 3</option>
+        <option value="4">opcja numer 4</option>
+        <option value="5">opcja numer 5</option>
+    </select> -->
+</body>
+
+</html>
