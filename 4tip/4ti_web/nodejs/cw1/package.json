@@ -1,0 +1,19 @@
+{
+  "name": "cw1",
+  "version": "1.0.0",
+  "description": "pierwszy kontakt z node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "first"
+  ],
+  "author": "noname",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
