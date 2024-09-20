@@ -1,4 +1,5 @@
 
+import { MouseEvent } from 'react'
 import { Movie } from '../models/movies'
 
 type Props = {
@@ -6,6 +7,10 @@ type Props = {
 }
 
 const ListMovies = ({ movies }: Props) => {
+    function handleOnClick(e: MouseEvent<HTMLTableRowElement>): void {
+        console.log(e.currentTarget.innerText);        
+    }
+
     return (
         <>
             <div>Lista filmów</div>
@@ -19,7 +24,7 @@ const ListMovies = ({ movies }: Props) => {
             </thead>
             <tbody>
                 {movies.map((movie,id) => (
-                    <tr key={id}>
+                    <tr style={{cursor:"pointer"}} onClick={(e)=>handleOnClick(e)} key={id}>
                         <td>{movie.title}</td>
                         <td>{movie.director}</td>
                         <td className='text-end'>{movie.year}</td>
