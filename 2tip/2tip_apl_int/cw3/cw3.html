@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,32 @@
     <link rel="stylesheet" href="cw3.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="container">
         <h1>Zbiór filmów</h1>
+        <form>
+            <div class="row m-2">
+                <input id="title" type="text" class="col-6" placeholder="podaj tytuł">
+                <span class="col-3 text-danger"></span>
+            </div>
+            <div class="row m-2">
+                <input id="director" type="text" class="col-6" placeholder="podaj reżysera">
+                <span class="col-3 text-danger"></span>
+            </div>
+
+            <div class="row m-2">
+                <input id="year" type="number" class="col-6" placeholder="podaj rok produkcji">
+                <span class="col-3 text-danger"></span>
+            </div>
+            <div class="row m-2">
+                <input class="btn btn-primary col-6" type="submit" value="Dodaj">
+            </div>
+        </form>
         <div id="result"></div>
     </div>
     <script src="bootstrap/js/bootstrap.bundle.js"></script>
     <script src="cw3.js" defer></script>
 </body>
+
 </html>

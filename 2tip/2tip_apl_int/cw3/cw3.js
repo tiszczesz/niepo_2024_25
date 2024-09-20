@@ -58,16 +58,40 @@ console.log(movies);
 function generTabMovies(data, elem) {
     const table = document.createElement("table");
     table.className = "table table-striped";
-    table.insertRow().innerHTML = "<th>Lp</th><th>Tytuł</th><th>Reżyser</th><th>Rok produkcji</th>";
+    table.insertRow().innerHTML = "<th>Lp</th><th>Tytuł</th><th>Reżyser</th><th>Rok produkcji</th><th></th>";
     let lp = 0;
     for (const movie of data) {
         const row = table.insertRow();
         row.innerHTML = `<td>${++lp}</td>
                         <td>${movie.title}</td>
                        <td>${movie.director}</td>
-                       <td>${movie.year}</td>`;
+                       <td>${movie.year}</td>
+                       <td><input type='button' value='X' class='btn btn-danger'</td>`;
     }
     elem.appendChild(table);
 }
 const elem = document.querySelector("#result");
 generTabMovies(movies, elem);
+
+const form = document.forms[0];
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const movie = {
+        title: document.querySelector("#title").value,
+        director: document.querySelector("#director").value,
+        year: parseInt(document.querySelector("#year").value),
+    }
+    movies.push(movie);
+    elem.innerHTML = "";
+    generTabMovies(movies, elem);
+    clearForm()
+})
+
+//napisać funkcję która wyczyści pola formularza
+function clearForm() {
+    document.querySelector("#title").value = "";
+    document.querySelector("#director").value = "";
+    document.querySelector("#year").value = "";
+}
+//console.log(form);
+
