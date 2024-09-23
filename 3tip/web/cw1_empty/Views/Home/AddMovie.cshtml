@@ -17,17 +17,17 @@
             <div class="row m-2">
                  <label class="col-3 text-end" asp-for="Title"></label>
                  <input type="text" class="col-6" asp-for="Title">
-                 <span class="col-3 rext-danger"></span>
+                 <span asp-validation-for="Title" class="col-3 text-danger"></span>
             </div>
              <div class="row m-2">
                  <label class="col-3 text-end" asp-for="Director"></label>
                  <input type="text" class="col-6" asp-for="Director">
-                 <span class="col-3 rext-danger"></span>
+                 <span asp-validation-for="Director" class="col-3 text-danger"></span>
             </div>
             <div class="row m-2">
                  <label class="col-3 text-end" asp-for="Year"></label>
                  <input type="number" class="col-6" asp-for="Year">
-                 <span class="col-3 rext-danger"></span>
+                 <span asp-validation-for="Year" class="col-3 text-danger"></span>
             </div>
             <div class="row m-2">
                     <button type="submit" class="btn btn-primary offset-3 col-6">Dodaj</button>

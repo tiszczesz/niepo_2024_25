@@ -33,4 +33,20 @@ public class MoviesRepo
         } // end using
         return movies;
     }
+
+    public void AddMovie(Movie movie)
+    {
+        using SqliteConnection conn = new SqliteConnection(_connectionString);
+        SqliteCommand command = conn.CreateCommand();
+        command.CommandText = "INSERT INTO movies (title, director, year) VALUES "
+              +" (@title, @director, @year)"; //zabezpieczenie przed sql injection przez użycie parametrów
+        command.Parameters.AddWithValue("@title", movie.Title);
+        command.Parameters.AddWithValue("@director", movie.Director);
+        command.Parameters.AddWithValue("@year", movie.Year);
+        //  command.CommandText = "INSERT INTO movies (title, director, year) VALUES "
+        //       +$" ('{movie.Title}', '{movie.Director}', {movie.Year})"; //bez zabezpieczenia
+        conn.Open();
+        command.ExecuteNonQuery();
+        conn.Close();
+    }
 }

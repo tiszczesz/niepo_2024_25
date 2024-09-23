@@ -24,6 +24,10 @@ namespace cw1_empty.Controllers
         [HttpPost]
         public IActionResult AddMovie(Movie movie) //przetwarza dane z formularza
         {
+            if(ModelState.IsValid){
+                _repo.AddMovie(movie);
+                return RedirectToAction("Index");
+            }
             return View();
         }
 
