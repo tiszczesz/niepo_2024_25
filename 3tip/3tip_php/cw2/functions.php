@@ -42,3 +42,10 @@ function getStudentsByGroupId(int $id) : array {
     $conn->close();
     return $students;
 }
+function getGroupsOptions(array $groups) : ?string {
+   $html = '';
+    foreach($groups as $g){
+         $html .= "<option value='{$g[0]}'>{$g[1]}</option>";
+    }
+    return $html;
+}

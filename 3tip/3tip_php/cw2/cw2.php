@@ -38,6 +38,9 @@
             }
             ?>
         </table>
+        <div>
+            <a class="btn btn-outline-secondary" href="addForm.php">Dodaj ucznia</a>
+        </div>
     </main>
 </body>
 </main>
