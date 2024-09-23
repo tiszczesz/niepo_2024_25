@@ -6,7 +6,8 @@ namespace cw1_empty.Controllers
     public class HomeController : Controller
     {
         private readonly MoviesRepo _repo;
-        public HomeController(IConfiguration configuration){
+        public HomeController(IConfiguration configuration)
+        {
             _repo = new MoviesRepo(configuration);
         }
         // GET: HomeController
@@ -14,6 +15,16 @@ namespace cw1_empty.Controllers
         {
             var movies = _repo.GetMovies();
             return View(movies);
+        }
+        [HttpGet]
+        public IActionResult AddMovie() //wyswietla formularz
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AddMovie(Movie movie) //przetwarza dane z formularza
+        {
+            return View();
         }
 
     }
