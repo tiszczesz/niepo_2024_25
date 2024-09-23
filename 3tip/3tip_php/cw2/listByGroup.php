@@ -25,6 +25,7 @@
                 <th>Lp</th>
                 <th>Imię</th>
                 <th>Nazwisko</th>
+                <th>Operacje</th>
             </tr>
             <?php
             $students = getStudentsByGroupId($_GET['id']);
@@ -35,6 +36,7 @@
                 echo "<td>{$lp}</td>";
                 echo "<td>{$s[1]}</td>";
                 echo "<td>{$s[2]}</td>";
+                echo "<td><a class='btn btn-danger' href='delete.php?id={$s[0]}'>USUŃ</a></td>";
                 echo "</tr>";
             }
             ?>
