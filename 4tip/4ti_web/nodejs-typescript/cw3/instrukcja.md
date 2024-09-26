@@ -19,6 +19,8 @@ npx tsc -init
 ```
 ### komilacja i uruchomienie
 
+utworzyc katalogi src i dist
+
 ```console
  npx tsc
  node ./dist/jakisPlikWykonawczy

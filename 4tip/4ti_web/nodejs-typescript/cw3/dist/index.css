@@ -1,0 +1,12 @@
+body{
+    background-color: bisque;
+}
+h1{
+    color: blue;
+    text-align: center;
+    border-bottom: 1px black solid;
+}
+#info{
+    border: solid 1px black;
+    padding: 10px;
+}
