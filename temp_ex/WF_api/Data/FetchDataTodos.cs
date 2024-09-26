@@ -10,7 +10,7 @@ namespace WF_api.Data
 {
     public class FetchDataTodos
     {
-        public static async Task<List<Todo>> GetTodos(string url) {
+        public static async Task<List<Todo>?> GetTodos() {
             HttpClient http = new HttpClient();
             http.BaseAddress = new Uri("https://jsonplaceholder.typicode.com/");
             var todos =  await http.GetFromJsonAsync<List<Todo>>("todos");
