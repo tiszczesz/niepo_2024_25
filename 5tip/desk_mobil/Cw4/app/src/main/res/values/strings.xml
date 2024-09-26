@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Cw4</string>
+    <string name="imagecontent">Euklides</string>
+    <string name="AppName">Obliczanie NWD</string>
+    <string name="buttonRun">Oblicz</string>
+</resources>
