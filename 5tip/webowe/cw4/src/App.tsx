@@ -16,6 +16,7 @@ function App() {
        <MyButton text='Hello World' label='przycisk 1'/>
        <MyButton text='ala ma kota' label='przycisk 2'/>
        <MyButton text='Zaraz idziemy' label='przycisk 3'/>
+       <MyButton  text='Zaraz idziemy' label='DDDD'>Przycisk z dzieckim</MyButton>
     </>
   )
 }
