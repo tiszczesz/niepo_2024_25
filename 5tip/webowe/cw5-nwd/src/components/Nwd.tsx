@@ -6,12 +6,10 @@ type Props = {
     height: number;
 }
 function nwdIter(a: number, b: number): number {
-    while (a != b) { //tradycyjna wersja Euklidesa
-        if (a > b) {
-            a -= b;
-        } else {
-            b -= a;
-        }
+    while (b != 0) {
+        let temp = a % b;
+        a = b;
+        b = temp;
     }
     return a;
 }
@@ -21,6 +19,7 @@ const Nwd = ({ width, height }: Props) => {
     const [result, setResult] = useState<string>("Tu będzie wynik");
     function handleSubmit(e: FormEvent<HTMLFormElement>): void {
         e.preventDefault();
+        if (isNaN(a) || isNaN(b)) return setResult("Podaj liczby całkowite");
         setResult(`NWD(${a}, ${b}) = ${nwdIter(a, b)}`);
     }
 
@@ -35,14 +34,27 @@ const Nwd = ({ width, height }: Props) => {
                 <div className="row m-3">
                     <label className='col-3 text-end' htmlFor="a">a = </label>
                     <input value={a}
-                        onChange={(e) => setA(parseInt(e.target.value))}
+                        onChange={(e) => {
+                            if (isNaN(parseInt(e.target.value))) {
+                                setA(0);
+                            } else {
+
+                            } setA(parseInt(e.target.value))
+                        }
+                        }
                         type="number" id="a"
                         className='col-6' min={0} />{a}
                 </div>
                 <div className="row m-3">
                     <label className='col-3 text-end' htmlFor="b">b = </label>
                     <input value={b}
-                        onChange={(e) => setB(parseInt(e.target.value))}
+                        onChange={(e) => {
+                            if (isNaN(parseInt(e.target.value))) {
+                                setB(0);
+                            } else {
+
+                            } setB(parseInt(e.target.value))
+                        }}
                         type="number" id="b"
                         className='col-6' min={0} />{b}
                 </div>
