@@ -39,3 +39,12 @@ int GetSize(const int SIZE) {
 	} while (result<0 || result>SIZE);
 	return result;
 }
+int HowMany(int tab[],int size,int number) {
+	int result = 0;
+	for(int i=0;i<size;i++) {
+		if (tab[i] == number) {
+			result++;
+		}
+	}
+	return result;
+}
