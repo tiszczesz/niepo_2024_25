@@ -66,6 +66,7 @@ console.log(movies);
 
 
 function generTabMovies(data, elem) {
+    elem.innerHTML = "";
     const table = document.createElement("table");
     table.className = "table table-striped";
     table.insertRow().innerHTML = "<th>Lp</th><th>Tytuł</th><th>Reżyser</th><th>Rok produkcji</th><th></th>";
@@ -79,21 +80,25 @@ function generTabMovies(data, elem) {
                        <td><input id='${movie.id}' type='button' value='X' class='btn btn-danger delete'</td>`;
     }
     elem.appendChild(table);
+    addDeleteClickEvent();
 }
 const elem = document.querySelector("#result");
 generTabMovies(movies, elem);
-const btnsDelete = document.querySelectorAll(".delete");
-btnsDelete.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-        console.log(e.target.id);
-        const id = parseInt(e.target.id);
-        movies.splice(movies.findIndex((movie) => movie.id === id), 1);
-        console.log(movies);
-        elem.innerHTML = "";
-        debugger;
-        generTabMovies(movies, elem);
+
+function addDeleteClickEvent() {
+    const btnsDelete = document.querySelectorAll(".delete");
+    btnsDelete.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            console.log(e.target.id);
+            const id = parseInt(e.target.id);
+            movies.splice(movies.findIndex((movie) => movie.id === id), 1);
+            console.log(movies);
+            generTabMovies(movies, elem);
+        });
     });
-});
+
+}
+generTabMovies(movies, elem);
 //console.log(btnsDelete);
 
 const form = document.forms[0];
