@@ -23,3 +23,7 @@ const movies: Movie[] = [
 
 
 ```
+
+## napisać skrypt
+
+generujący tabelke bootstrapową z danymi z pliku Data.ts po naciśnięciu przycisku na stronie
