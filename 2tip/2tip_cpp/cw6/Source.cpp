@@ -4,12 +4,27 @@
 using namespace std;
 
 int main() {
-	int tab[50];
+	const int MAXSIZE = 5000;	
+	int tab[MAXSIZE];
+
+	//napisac funkcje ktora zwraca rozmiar miedzy 0 a MAXSIZE
+	int size = GetSize(MAXSIZE);
 
 	//napisaæ funkcjê, która wype³ni tablicê liczbami losowymi
-	FillTab(tab, 50);
+	//w zakresie od 0 do 100
+	FillTab(tab, size);
 	//napisaæ funkcjê, która wypisze tablicê
-	ShowTab(tab, 50);
+	ShowTab(tab, size);
 	Show("To jest z funkcji: Hello World!");//uzycie funkcji z pliku functions.h
-	Hello();//uzycie funkcji z pliku functions.cpp
+	//napisac funkcje ktora sprawdzi ile jest liczb o okreslonej wrtosci
+	//w tablicy
+	// HowMany(tab, size, 5); ---> int
+	cout << "Podaj liczbe do sprawdzenia: ";
+	int number;
+	cin >> number;
+	cout << "Liczba " << number << " wystepuje "
+	      << HowMany(tab, size, number) << " razy." << endl;
+
+
+	//Hello();//uzycie funkcji z pliku functions.cpp
 }
