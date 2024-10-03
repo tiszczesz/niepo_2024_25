@@ -1,0 +1,9 @@
+h1{
+    text-align: center;
+    color: brown;
+}
+#root{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}
