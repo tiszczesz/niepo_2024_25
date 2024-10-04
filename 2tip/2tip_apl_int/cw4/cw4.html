@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ćwiczenie 4</title>
+</head>
+
+<body>
+    <h1>Klasy w JS</h1>
+    <h3>Użycie literałów json</h3>
+    <div id="info"></div>
+    <script>
+        const person1 = {
+            firstname: "Jan",
+            lastname: "Kowalski",
+            age: 25,
+            address: {
+                city: "Warszawa",
+                street: "Marszałkowska",
+                num: 10
+            },
+            show: function () {
+                return `imię: ${this.firstname}, nazwisko: ${this.lastname}, wiek: ${this.age},
+                            adres: ${this.address.city}, ${this.address.street} ${this.address.num}`;
+            }
+        };
+        console.log(person1);
+        document.querySelector("#info").innerHTML = person1.show();
+    </script>
+    <h3>Użycie konstruktora</h3>
+    <div id="info2"></div>
+    <script>
+        function Book(title, author, price) {
+            this.title = title;
+            this.author = author;
+            this.price = price;
+            this.show = function () {
+                return `tytuł: ${this.title}, autor: ${this.author}, cena: ${this.price}`;
+            }
+        }
+        const b1 = new Book("Pan Tadeusz", "Adam Mickiewicz", 30);//utworzenie obiektu
+        const b2 = new Book("Lalka", "Bolesław Prus", 40);//utworzenie obiektu
+        const par1 = document.createElement("p");
+        par1.innerHTML = b1.show();
+        document.querySelector("#info2").appendChild(par1);
+        const par2 = document.createElement("p");
+        par2.innerHTML = b2.show();
+        document.querySelector("#info2").appendChild(par2);
+    </script>
+
+    <h3>Użycie klasy</h3>
+    <div id="info3"></div>
+    <script>
+        class Movie { //definicja klasy
+            constructor(title, director, year) {
+                this.title = title;
+                this.director = director;
+                this.year = year;
+            }
+            show() {
+                return `tytuł: ${this.title}, reżyser: ${this.director}, rok: ${this.year}`;
+            }
+        }
+        const m1 = new Movie("Titanic", "James Cameron", 1997);//utworzenie obiektu
+    </script>
+</body>
+
+</html>
