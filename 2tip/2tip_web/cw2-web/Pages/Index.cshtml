@@ -4,13 +4,35 @@
 }
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Strona RazorPage - Index</h1>
     <div>Dzisiaj mamy @DateTime.Now.ToShortDateString()</div>
+    <div>
+        Wylosowana liczba: @Model.MyNumber
+    </div>
+    <div>
+        <ul>
+            @foreach (var name in Model.Names())
+            {
+                <li>@name</li>
+            }
+        </ul>
+        <hr>
+        <select id="colors">
+            @foreach (var color in Model.GetColors())
+            {
+                <option value="@color">@color</option>
+            }
+        </select>
+    </div>
+    <script src="~/cw2.js" defer></script>
 </body>
+
 </html>
