@@ -13,10 +13,21 @@ const createDiv = (div: HTMLDivElement) => {
   elem.style.backgroundColor = 'red';
   div?.appendChild(elem);
 }
-const creteSelect = (div: HTMLDivElement,data:string[]) => {
+const creteSelect = (div: HTMLDivElement, data: string[]) => {
   const select = document.createElement('select');
+  select.addEventListener('change', (e) => {
+    const target = e.target as HTMLSelectElement;
+    const myDiv = document.getElementById('myDiv');
+    myDiv?.style.setProperty('background-color', target.value);
+  });
   //dodanie opcji do selecta
+  data.forEach((color) => {
+    const option = document.createElement('option');
+    option.value = color;
+    option.text = color;
+    select.appendChild(option);
+  });
   div?.appendChild(select);
 }
 createDiv(app as HTMLDivElement);
-creteSelect(app as HTMLDivElement,colors);
+creteSelect(app as HTMLDivElement, colors);
