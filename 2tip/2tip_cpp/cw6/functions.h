@@ -4,3 +4,4 @@ void FillTab(int tab[], int size);
 void ShowTab(int tab[], int size);
 int GetSize(const int SIZE);
 int HowMany(int tab[], int size, int number);
+int CountAll(int target[], int sizeTar, int source[], int sizeSou);

@@ -48,3 +48,14 @@ int HowMany(int tab[],int size,int number) {
 	}
 	return result;
 }
+
+
+int CountAll(int target[],int sizeTar,int source[],int sizeSou) {
+	int result = 0;
+	for(int i=0;i<sizeSou;i++) {
+		for(int j=0;j<sizeTar;j++) {
+			if (target[j] == source[i]) result++;
+		}
+	}
+	return result;
+}

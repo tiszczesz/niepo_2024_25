@@ -30,4 +30,6 @@ int main() {
 	//napisac funkcje ktora sprawdzi wszystkie liczby z tablicy tab1
 	//ile razy wystepuja w tablicy tab
 	int numbers[] = {1,2,3,4,5,6,7,8,9,10};
+	int result = CountAll(tab, size, numbers, 10);
+	cout << "Liczby z tablicy numbers wystepuja " << result << " razy" << endl;
 }

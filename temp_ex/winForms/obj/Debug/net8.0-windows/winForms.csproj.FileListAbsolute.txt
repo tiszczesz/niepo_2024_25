@@ -1,0 +1,17 @@
+E:\tools\GitHub\niepo_2024_25\temp_ex\winForms\bin\Debug\net8.0-windows\winForms.exe
+E:\tools\GitHub\niepo_2024_25\temp_ex\winForms\bin\Debug\net8.0-windows\winForms.deps.json
+E:\tools\GitHub\niepo_2024_25\temp_ex\winForms\bin\Debug\net8.0-windows\winForms.runtimeconfig.json
+E:\tools\GitHub\niepo_2024_25\temp_ex\winForms\bin\Debug\net8.0-windows\winForms.dll
+E:\tools\GitHub\niepo_2024_25\temp_ex\winForms\bin\Debug\net8.0-windows\winForms.pdb
+E:\tools\GitHub\niepo_2024_25\temp_ex\winForms\obj\Debug\net8.0-windows\winForms.Form1.resources
+E:\tools\GitHub\niepo_2024_25\temp_ex\winForms\obj\Debug\net8.0-windows\winForms.csproj.GenerateResource.cache
+E:\tools\GitHub\niepo_2024_25\temp_ex\winForms\obj\Debug\net8.0-windows\winForms.GeneratedMSBuildEditorConfig.editorconfig
+E:\tools\GitHub\niepo_2024_25\temp_ex\winForms\obj\Debug\net8.0-windows\winForms.AssemblyInfoInputs.cache
+E:\tools\GitHub\niepo_2024_25\temp_ex\winForms\obj\Debug\net8.0-windows\winForms.AssemblyInfo.cs
+E:\tools\GitHub\niepo_2024_25\temp_ex\winForms\obj\Debug\net8.0-windows\winForms.csproj.CoreCompileInputs.cache
+E:\tools\GitHub\niepo_2024_25\temp_ex\winForms\obj\Debug\net8.0-windows\winForms.sourcelink.json
+E:\tools\GitHub\niepo_2024_25\temp_ex\winForms\obj\Debug\net8.0-windows\winForms.dll
+E:\tools\GitHub\niepo_2024_25\temp_ex\winForms\obj\Debug\net8.0-windows\refint\winForms.dll
+E:\tools\GitHub\niepo_2024_25\temp_ex\winForms\obj\Debug\net8.0-windows\winForms.pdb
+E:\tools\GitHub\niepo_2024_25\temp_ex\winForms\obj\Debug\net8.0-windows\winForms.genruntimeconfig.cache
+E:\tools\GitHub\niepo_2024_25\temp_ex\winForms\obj\Debug\net8.0-windows\ref\winForms.dll
