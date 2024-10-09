@@ -17,8 +17,11 @@ const creteSelect = (div: HTMLDivElement, data: string[]) => {
   const select = document.createElement('select');
   select.addEventListener('change', (e) => {
     const target = e.target as HTMLSelectElement;
-    const myDiv = document.getElementById('myDiv');
-    myDiv?.style.setProperty('background-color', target.value);
+    const myDiv = document.querySelector<HTMLDivElement>('#myDiv');
+    //myDiv?.style.setProperty('background-color', target.value);
+    if(myDiv) {
+      myDiv.style.backgroundColor = target.value;
+    }   
   });
   //dodanie opcji do selecta
   data.forEach((color) => {
