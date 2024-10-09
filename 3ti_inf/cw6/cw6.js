@@ -7,10 +7,18 @@ btn.onclick = function () { //dodajemy funkcje do zdarzenia onclick
     const root = document.querySelector('#root');//szukamy elementu root
     root.style.width = number + "px";//ustawiamy szerokość elementu root na wartość z inputa
 }
-let width = 100;
+
 const btn2 = document.querySelector('#expand')//szukamy elementu o id change2
+
 btn2.onclick = function () {//dodajemy funkcje do zdarzenia onclick
     const root = document.querySelector('#root');
-    width += 10;
-   root.style.width = width + "px";
+    let width = root.offsetWidth;//odczytujemy szerokość elementu root
+    width += 10; //width = width + 10
+    root.style.width = width + "px";
+}
+document.querySelector("#reduce").onclick = function () {
+    const root = document.querySelector('#root');
+    let width = root.offsetWidth;//odczytujemy szerokość elementu root
+    width -= 10; //width = width - 10
+    root.style.width = width + "px";//ustawiamy szerokość elementu root 
 }
