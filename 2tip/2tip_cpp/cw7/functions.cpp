@@ -2,6 +2,7 @@
 #include <string>
 #include <ctime>
 #include <cstdlib>
+#include <cmath>
 
 void FillTab(int tab[], int size) {
 	srand(time(0));
@@ -25,5 +26,41 @@ int GetSize(const int SIZE) {
 	return result;
 }
 
+int GetMax(int t[],int size) {
+	if (size <= 0) return -9999999;
+	int max = t[0];
+	for(int i=0;i<size;i++) {
+		if(max<t[i]) {
+			max = t[i];
+		}
+	}
+	return max;
+}
+int GetMaxInd(int t[], int size,int start = 0) {//szukanie miejsca minimum od indeksu = start
+	if (start>=size) return -9999999;
+	int max = t[start];
+	int index = start;
+	for (int i = start; i < size; i++) {
+		if (max < t[i]) {
+			max = t[i];
+			index = i;
+		}
+	}
+	return index;
+}
+
+int GetMin(int t[], int size) {
+	if (size <= 0) return -9999999;
+	int min = t[0];
+	for (int i = 0; i < size; i++) {
+		if (min > t[i]) {
+			min = t[i];
+		}
+	}
+	return min;
+}
+int GetAmp(int t[], int size) {
+	return abs(GetMax(t, size) - GetMin(t, size));
+}
 
 
