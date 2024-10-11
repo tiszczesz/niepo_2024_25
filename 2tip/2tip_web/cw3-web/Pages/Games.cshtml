@@ -13,6 +13,28 @@
 
 <body>
     <h1>Lista gier</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Tytuł</th>
+                <th>Opis</th>
+                <th>Data</th>
+                <th>Rodzaj</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var game in Model.Games)
+            {
+                <tr>
+                    <td>@game.Name</td>
+                    <td>@game.Description</td>
+                    <td>@game.ReleaseDate</td>
+                    <td>@game.Genre</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
 </body>
 
 </html>
