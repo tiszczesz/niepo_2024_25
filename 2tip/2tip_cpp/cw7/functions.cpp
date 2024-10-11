@@ -79,3 +79,5 @@ void SortW(int tab[], int size) {
 		SwapGood(tab[i], tab[GetMaxInd(tab, size, i)]);
 	}
 }
+
+//sortowanie b¹belkowe !!!!
