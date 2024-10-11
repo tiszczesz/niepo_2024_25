@@ -63,4 +63,19 @@ int GetAmp(int t[], int size) {
 	return abs(GetMax(t, size) - GetMin(t, size));
 }
 
+void SwapWrong(int a, int b) { //kopiowanie zmiennych
+	int temp = a;
+	a = b;
+	b = temp;
+}
+void SwapGood(int& a, int& b) { //uzycie referencji
+	int temp = a;
+	a = b;
+	b = temp;
+}
 
+void SortW(int tab[], int size) {
+	for(int i=0;i<size-1;i++) {
+		SwapGood(tab[i], tab[GetMaxInd(tab, size, i)]);
+	}
+}

@@ -13,6 +13,17 @@ int main() {
 	cout << "i = "<< GetMaxInd(tab, size) << endl;
 	cout << "i = "<< GetMaxInd(tab, size,6) << endl;
 	cout << "max = " << max << endl;
+
+	int a = 5;
+	int b = 10;
+	SwapWrong(a, b);
+	cout << "a = " << a << " b = " << b << endl;
+	SwapGood(a, b);
+	cout << "a = " << a << " b = " << b << endl;
+
+	SortW(tab, size);
+	cout << "Po sortowaniu: ===========================  \n	";
+	ShowTab(tab, size);
 	return 0;
 }
 
