@@ -6,9 +6,16 @@
         xmlns:local="clr-namespace:cw1_wpf"
         mc:Ignorable="d"
         Title="Okno główne" Height="350" Width="600">
-    <StackPanel Orientation="Vertical" Margin="0,0,0,0">
-       <TextBox ></TextBox>
-       <TextBox ></TextBox>
-       <TextBox ></TextBox>
+    <StackPanel Orientation="Vertical" Margin="10">
+       <StackPanel Orientation="Horizontal">
+           <Label Width="200" HorizontalContentAlignment="Right">Podaj a: </Label>
+            <TextBox x:Name="txtA" Width="300" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Width="200" HorizontalContentAlignment="Right">Podaj b:</Label>
+            <TextBox x:Name="txtB" Width="300" />
+        </StackPanel>
+        <Button Width="200" Margin="30">Oblicz NWD</Button>
+        <Label x:Name="result" Width="200" Margin="30" ></Label>
     </StackPanel>
 </Window>
