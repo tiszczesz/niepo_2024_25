@@ -19,7 +19,7 @@ namespace cw10_wf.Models
                 case '*':
                     return A * B;
                 case '/':
-                    return B!=0 ? A / B: -9.99999;
+                    return B!=0 ? Math.Round((double)A / B,2): -9.99999;
                 default:
                     return A + B;
             }
