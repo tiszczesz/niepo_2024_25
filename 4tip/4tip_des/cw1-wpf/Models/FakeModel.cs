@@ -12,7 +12,7 @@ namespace cw1_wpf.Models
         public int B { get; set; }
 
         public int GetSum() {
-            return 0;
+            return A+B;
         }
     }
 }

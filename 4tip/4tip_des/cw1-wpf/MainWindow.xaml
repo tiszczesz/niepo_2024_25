@@ -8,16 +8,26 @@
         Title="Okno główne" Height="350" Width="600">
     <StackPanel Orientation="Vertical" Margin="10" Background="#FFE8DCDC">
         <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-            <Label Width="200" HorizontalContentAlignment="Right" Margin="0,10,0,0">Podaj a:</Label>
+            <Label Width="158" HorizontalContentAlignment="Right" Margin="0,10,0,0">Podaj a:</Label>
             <TextBox x:Name="txtA" Width="370" Margin="0,10,0,0" />
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-            <Label Width="200" HorizontalContentAlignment="Right" Margin="0,10,0,0">Podaj b:</Label>
+            <Label Width="159" HorizontalContentAlignment="Right" Margin="0,10,0,0">Podaj b:</Label>
             <TextBox x:Name="txtB" Width="370" Margin="0,10,0,0" />
         </StackPanel>
-        <Button Margin="10,10,10,0" >
+        <ComboBox x:Name="cbChoice" Width="410" Margin="0,10,10,0"
+                  SelectedIndex="0"
+                  HorizontalAlignment="Right" IsReadOnly="True">
+            <ComboBoxItem Content="Rekurencyjnie"/>
+            <ComboBoxItem Content="Iteracyjnie"/>
+        </ComboBox>
+        <Button Margin="10,10,10,0"  Click="ButtonBase_OnClick" Width="411" HorizontalAlignment="Right">
             Oblicz NWD
         </Button>
-        <Label x:Name="result" Width="200" Margin="30" ></Label>
+        <Border Margin="20" BorderBrush="LightCoral" Width="400" HorizontalAlignment="Right"
+                BorderThickness="2" CornerRadius="4">
+            <Label x:Name="lbResult" Width="200" Margin="30" ></Label>
+        </Border>
+       
     </StackPanel>
 </Window>
