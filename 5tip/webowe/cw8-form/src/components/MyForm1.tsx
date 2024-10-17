@@ -14,8 +14,12 @@ const MyForm1 = (props: Props) => {
         const form = event.currentTarget;
         const formData = new FormData(form);
         console.log(formData);
-        console.log(formData.entries);
+        console.log(formData.entries());
         const data = Object.fromEntries(formData.entries()) as { [key: string]: string };
+        console.log(data.firstname);
+        console.log(data.lastname);
+        console.log(data.dateB);
+        console.log(data.salary);
         console.log(data);
         setResult(JSON.stringify(data));
     }
