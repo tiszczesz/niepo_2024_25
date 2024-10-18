@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Animals } from '../animals';
 
 type Props = {
-    title: string;
-    list: string[];
+    title: string;    
 }
 
-function SearchList({ title, list }: Props) {
+function SearchList({ title}: Props) {
+    const [list, setList] = React.useState(Animals);
     return (
         <div>
             <h2>{title}</h2>
