@@ -1,0 +1,16 @@
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.nav-list a {
+  text-decoration: none;
+  color: #333;
+}
+.nav-list a:hover {
+  color: #007bff;
+}
+nav{
+  background-color: #b7bcc1;
+  padding: 10px;
+}
