@@ -1,5 +1,5 @@
 ﻿@page
-@model cw4_forms.Pages.IndexModel
+@model cw4_forms.Pages.FormModel
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,14 +15,11 @@
 </head>
 
 <body>
-    <h1>Index</h1>
-    <div>
-        <a asp-page="Form">Z modelem</a>
-    </div>
+    <h1>Form</h1>
     <form method="post">
-        <input name="firstname" type="text" placeholder="podaj imię" /> <br />
-        <input name="lastname" type="text" placeholder="podaj nazwisko" /> <br />
-        <input name="age" type="number" placeholder="podaj wiek" /> <br />
+        <input asp-for="MyPerson.FirstName" type="text" placeholder="podaj imię" /> <br />
+        <input asp-for="MyPerson.LastName" type="text" placeholder="podaj nazwisko" /> <br />
+        <input asp-for="MyPerson.Age" type="number" placeholder="podaj wiek" /> <br />
         <input type="submit" value="Wyślij" />
     </form>
     <hr>
