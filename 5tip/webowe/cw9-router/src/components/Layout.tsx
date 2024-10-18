@@ -11,6 +11,7 @@ const Layout = (props: Props) => {
                 <li> <Link to='/'>Home</Link> </li>
                 <li> <Link to='about'>O nas</Link> </li>
                 <li> <Link to='page1'>Strona 1</Link> </li>
+                <li> <Link to='list'>Zwierzęta</Link> </li>
             </ul>
         </nav>
         <main>
