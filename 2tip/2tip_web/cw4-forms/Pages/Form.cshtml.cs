@@ -10,10 +10,18 @@ namespace cw4_forms.Pages
         public Person MyPerson { get; set; }
         public void OnGet()
         {
+            ViewData["message"] = "Przed zatwierdzeniem formularza wprowadź dane";
         }
         public void OnPost()
         {
-            var person = MyPerson;
+            if (ModelState.IsValid)
+            {
+                ViewData["message"] = "Dane zostały zapisane";
+            }
+            else
+            {
+                ViewData["message"] = "Dane nie zostały zapisane";
+            }
         }
     }
 }

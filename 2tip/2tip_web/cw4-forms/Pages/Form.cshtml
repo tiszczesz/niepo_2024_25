@@ -17,16 +17,20 @@
 <body>
     <h1>Form</h1>
     <form method="post">
-        <input asp-for="MyPerson.FirstName" type="text" placeholder="podaj imię" /> <br />
-        <input asp-for="MyPerson.LastName" type="text" placeholder="podaj nazwisko" /> <br />
-        <input asp-for="MyPerson.Age" type="number" placeholder="podaj wiek" /> <br />
+        <input asp-for="MyPerson.FirstName" type="text" placeholder="podaj imię" />
+        <span asp-validation-for="MyPerson.FirstName"></span> <br />
+        <input asp-for="MyPerson.LastName" type="text" placeholder="podaj nazwisko" />
+        <span asp-validation-for="MyPerson.LastName"></span> <br />
+        <input asp-for="MyPerson.Age" type="number" placeholder="podaj wiek" />
+        <span asp-validation-for="MyPerson.Age"></span> <br />
         <input type="submit" value="Wyślij" />
     </form>
     <hr>
+    @ViewData["message"]
     <h2>Wynik</h2>
     <div>
 
-        Imię: @ViewData["firstname"] 
+        Imię: @ViewData["firstname"]
         Nazwisko: @ViewData["lastname"]
         Wiek: @ViewData["age"]
     </div>
