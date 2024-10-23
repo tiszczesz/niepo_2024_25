@@ -27,13 +27,16 @@
     </form>
     <hr>
     @ViewData["message"]
-    <h2>Wynik</h2>
-    <div>
+    
+    @if (Request.Method=="POST" && Model.MyPerson != null)
+    {<h2>Wynik</h2>
+        <div>
+            Imię: @Model.MyPerson.FirstName
+            Nazwisko:@Model.MyPerson.LastName
+            Wiek: @Model.MyPerson.Age
+        </div>
+    }
 
-        Imię: @ViewData["firstname"]
-        Nazwisko: @ViewData["lastname"]
-        Wiek: @ViewData["age"]
-    </div>
 </body>
 
 </html>

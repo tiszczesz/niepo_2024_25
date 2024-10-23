@@ -14,6 +14,7 @@ namespace cw4_forms.Pages
         }
         public void OnPost()
         {
+            ViewData["method"] = "POST";
             if (ModelState.IsValid)
             {
                 ViewData["message"] = "Dane zostały zapisane";
