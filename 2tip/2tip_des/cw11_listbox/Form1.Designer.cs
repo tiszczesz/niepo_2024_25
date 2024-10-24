@@ -38,6 +38,11 @@
             label4 = new Label();
             lbMin = new Label();
             label6 = new Label();
+            lbNames = new ListBox();
+            tbFirstname = new TextBox();
+            label3 = new Label();
+            btnAddNew = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -135,11 +140,60 @@
             label6.TabIndex = 8;
             label6.Text = "Min:";
             // 
+            // lbNames
+            // 
+            lbNames.FormattingEnabled = true;
+            lbNames.ItemHeight = 15;
+            lbNames.Location = new Point(856, 76);
+            lbNames.Name = "lbNames";
+            lbNames.Size = new Size(212, 559);
+            lbNames.TabIndex = 10;
+            // 
+            // tbFirstname
+            // 
+            tbFirstname.Location = new Point(856, 38);
+            tbFirstname.Name = "tbFirstname";
+            tbFirstname.Size = new Size(212, 23);
+            tbFirstname.TabIndex = 11;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(764, 41);
+            label3.Name = "label3";
+            label3.Size = new Size(63, 15);
+            label3.TabIndex = 12;
+            label3.Text = "Podaj imię";
+            // 
+            // btnAddNew
+            // 
+            btnAddNew.Location = new Point(679, 89);
+            btnAddNew.Name = "btnAddNew";
+            btnAddNew.Size = new Size(148, 37);
+            btnAddNew.TabIndex = 13;
+            btnAddNew.Text = "dodaj do listy";
+            btnAddNew.UseVisualStyleBackColor = true;
+            btnAddNew.Click += btnAddNew_Click;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(679, 145);
+            button1.Name = "button1";
+            button1.Size = new Size(148, 37);
+            button1.TabIndex = 14;
+            button1.Text = "wstaw do listy";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(754, 676);
+            ClientSize = new Size(1127, 676);
+            Controls.Add(button1);
+            Controls.Add(btnAddNew);
+            Controls.Add(label3);
+            Controls.Add(tbFirstname);
+            Controls.Add(lbNames);
             Controls.Add(lbMin);
             Controls.Add(label6);
             Controls.Add(lbMax);
@@ -168,5 +222,10 @@
         private Label label4;
         private Label lbMin;
         private Label label6;
+        private ListBox lbNames;
+        private TextBox tbFirstname;
+        private Label label3;
+        private Button btnAddNew;
+        private Button button1;
     }
 }
