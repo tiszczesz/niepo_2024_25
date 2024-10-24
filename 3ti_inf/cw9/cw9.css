@@ -1,0 +1,19 @@
+main {
+  margin: 30px;
+}
+label {
+  display: inline-block;
+  text-align: right;
+  margin-right: 5px;
+  width: 200px;
+}
+input {
+  width: 200px;
+}
+#count {
+  margin-top: 10px;
+  margin-left: 200px;
+}
+section {
+  margin-top: 20px;
+}
