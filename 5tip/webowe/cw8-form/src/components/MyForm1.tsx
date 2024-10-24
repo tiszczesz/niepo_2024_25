@@ -13,7 +13,7 @@ const MyForm1 = (props: Props) => {
         event.preventDefault();
         const form = event.currentTarget;
         const formData = new FormData(form);
-        console.log(formData);
+        console.log(formData.get('firstname'));
         console.log(formData.entries());
         const data = Object.fromEntries(formData.entries()) as { [key: string]: string };
         console.log(data.firstname);
