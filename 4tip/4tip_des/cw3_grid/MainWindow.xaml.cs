@@ -1,38 +1,37 @@
-﻿using System.Text;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using cw3_grid.Models;
 
-namespace cw3_grid
-{
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
-    {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+namespace cw3_grid;
 
-        private void ButtonBase_OnClick(object sender, RoutedEventArgs e) {
-            MessageBox.Show("Hello");
-        }
+/// <summary>
+///     Interaction logic for MainWindow.xaml
+/// </summary>
+public partial class MainWindow : Window {
+    public MainWindow() {
+        InitializeComponent();
+    }
 
-        private void TbA_OnPreviewTextInput(object sender, TextCompositionEventArgs e) {
-            e.Handled = IsTextAllowed(e.Text);
+    private void ButtonBase_OnClick(object sender, RoutedEventArgs e) {
+        //MessageBox.Show("Hello");
+        try {
+            var a = Convert.ToInt32(tbA.Text);
+            var b = Convert.ToInt32(tbB.Text);
+            var result = Nwd.Run(a, b);
+            lbResult.Content = $"NWD({a},{b}) = {result.ToString()}";
         }
-        private bool IsTextAllowed(string text)
-        {
-            Regex regex = new Regex("[^0-9]+"); // Tylko cyfry
-            return regex.IsMatch(text);
+        catch (FormatException ex) {
+            MessageBox.Show("Podaj liczby całkowite");
         }
+    }
+
+    private void TbA_OnPreviewTextInput(object sender, TextCompositionEventArgs e) {
+        e.Handled = IsTextAllowed(e.Text);
+    }
+
+    private bool IsTextAllowed(string text) {
+        var regex = new Regex("[^0-9]+"); // Tylko cyfry
+        return regex.IsMatch(text);
     }
 }

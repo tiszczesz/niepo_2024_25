@@ -6,6 +6,13 @@
         xmlns:local="clr-namespace:cw3_grid"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" MinWidth="600" MinHeight="400">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFE8E8D1"/>
+            <GradientStop Color="#FFF2F398" Offset="1"/>
+            <GradientStop Color="#FFA2A255" Offset="0.509"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -14,7 +21,7 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" MinWidth="300"/>
-            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="2*" MinWidth="200" />
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         <Image x:Name="image" Grid.Column="2"  
@@ -41,17 +48,26 @@
                 Content="OBLICZ" Margin="19,19,26,20">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
-                    <Border Background="LightGray" 
+                    <Border 
                             BorderBrush="Black" 
                             BorderThickness="2" 
                             CornerRadius="10">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFA9CAC7"/>
+                                <GradientStop Color="White" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Border>
                 </ControlTemplate>
             </Button.Template>
         </Button>
 
-
+        <Label Grid.Row="2" Grid.Column="1" FontSize="30" Name="lbResult"
+                FontWeight="Bold" Foreground="DarkRed"
+                Content="Wynik" HorizontalAlignment="Center"
+                VerticalAlignment="Center"></Label>
 
     </Grid>
 </Window>
