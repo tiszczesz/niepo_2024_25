@@ -51,7 +51,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/list"
-        android:divider="#f44323"
+        android:divider="#FF5722"
+        android:dividerHeight="1dp"
         android:layout_margin="20dp"/>
 
 
