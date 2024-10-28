@@ -7,6 +7,8 @@ public partial class Form1 : Form {
     public Form1()
     {
         InitializeComponent();
+        dataGridView1.ReadOnly = true;
+        dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         _repo = new AnimlasRepo();
     }
 
@@ -14,5 +16,12 @@ public partial class Form1 : Form {
     {
         var animals = _repo.GetAnimals();
         dataGridView1.DataSource = animals;
+        dataGridView1.Columns["Weight"]!.DefaultCellStyle.Alignment = 
+                DataGridViewContentAlignment.MiddleRight;
+        dataGridView1.Columns["Age"]!.DefaultCellStyle.Alignment =
+            DataGridViewContentAlignment.MiddleRight;
+        dataGridView1.Columns["Id"]!.Visible = false;
+      
+        
     }
 }

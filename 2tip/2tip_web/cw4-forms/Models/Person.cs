@@ -6,7 +6,7 @@ namespace cw4_forms.Models;
 
 public class Person
 {
-    [DisplayName("Podaj imię")]
+    [DisplayName("Podaj fajne imię")]
     [Required(ErrorMessage = "Imię jest wymagane")]
     public string? FirstName { get; set; }
 

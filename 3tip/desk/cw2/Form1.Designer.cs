@@ -29,6 +29,7 @@ partial class Form1
     private void InitializeComponent()
     {
         dataGridView1 = new DataGridView();
+        panel1 = new Panel();
         ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
         SuspendLayout();
         // 
@@ -36,10 +37,19 @@ partial class Form1
         // 
         dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
         dataGridView1.Dock = DockStyle.Fill;
-        dataGridView1.Location = new Point(0, 0);
+        dataGridView1.Location = new Point(200, 0);
         dataGridView1.Name = "dataGridView1";
-        dataGridView1.Size = new Size(800, 450);
+        dataGridView1.Size = new Size(600, 450);
         dataGridView1.TabIndex = 0;
+        // 
+        // panel1
+        // 
+        panel1.BackColor = Color.FromArgb(255, 224, 192);
+        panel1.Dock = DockStyle.Left;
+        panel1.Location = new Point(0, 0);
+        panel1.Name = "panel1";
+        panel1.Size = new Size(200, 450);
+        panel1.TabIndex = 1;
         // 
         // Form1
         // 
@@ -47,6 +57,7 @@ partial class Form1
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(800, 450);
         Controls.Add(dataGridView1);
+        Controls.Add(panel1);
         Name = "Form1";
         Text = "Form1";
         Load += Form1_Load;
@@ -57,4 +68,5 @@ partial class Form1
     #endregion
 
     private DataGridView dataGridView1;
+    private Panel panel1;
 }

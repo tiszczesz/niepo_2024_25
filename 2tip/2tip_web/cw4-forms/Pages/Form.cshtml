@@ -17,19 +17,23 @@
 <body>
     <h1>Form</h1>
     <form method="post">
+        <label asp-for="MyPerson.FirstName"></label>
         <input asp-for="MyPerson.FirstName" type="text" placeholder="podaj imię" />
         <span asp-validation-for="MyPerson.FirstName"></span> <br />
+        <label asp-for="MyPerson.LastName"></label>
         <input asp-for="MyPerson.LastName" type="text" placeholder="podaj nazwisko" />
         <span asp-validation-for="MyPerson.LastName"></span> <br />
+        <label asp-for="MyPerson.Age"></label>
         <input asp-for="MyPerson.Age" type="number" placeholder="podaj wiek" />
         <span asp-validation-for="MyPerson.Age"></span> <br />
         <input type="submit" value="Wyślij" />
     </form>
     <hr>
     @ViewData["message"]
-    
-    @if (Request.Method=="POST" && Model.MyPerson != null)
-    {<h2>Wynik</h2>
+
+    @if (Request.Method == "POST" && Model.MyPerson != null)
+    {
+        <h2>Wynik</h2>
         <div>
             Imię: @Model.MyPerson.FirstName
             Nazwisko:@Model.MyPerson.LastName

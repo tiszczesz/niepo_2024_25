@@ -1,0 +1,8 @@
+Przygotowanie stanowiska zdającego egzamin
+1.	Wykonać standardową instalację systemu operacyjnego Windows lub Linux zgodnego z tabelą 3. W systemie powinna być zainstalowana dowolna przeglądarka internetowa.
+2.	Zainstalować wszystkie sterowniki sprzętu wchodzącego w skład komputera.
+3.	Utworzyć konto Administrator z hasłem Hu8VC^der@1
+4.	Utworzyć konto Egzamin bez hasła, konto z ograniczonymi uprawnieniami (użytkownik standardowy).
+5.	W przypadku zainstalowania systemu z rodziny Windows w opcjach folderów odznaczyć „ukryj rozszerzenia znanych typów plików”. Rozszerzenia mają być widoczne.
+6.	Zainstalować program do obróbki grafiki rastrowej (np. Gimp). 
+7.	Zainstalować edytor tekstowy zaznaczający składnię HTML (np. Notepad++).
