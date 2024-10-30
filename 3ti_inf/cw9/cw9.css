@@ -26,3 +26,8 @@ section {
   border-radius: 5px;
   width: 50%;
 }
+#result {
+  color: red;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
