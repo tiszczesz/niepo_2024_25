@@ -7,4 +7,4 @@ Napisz aplikację internetową po stronie klienta (js) która:
   - e98
   - diesel
   - gaz
-4. Obiczyć koszy podróży
+4. Obliczyć koszy podróży
