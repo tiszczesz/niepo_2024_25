@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Layout stron</h1>
+    <nav>
+        <a asp-page="/">Home</a>
+        <a asp-page="/Page1">strona1</a>
+        <a asp-page="/Contact">Contact</a>
+    </nav>
+    <div>
+        @RenderBody() <!-- This is where the content of the page will be rendered -->
+    </div>
+</body>
+</html>
