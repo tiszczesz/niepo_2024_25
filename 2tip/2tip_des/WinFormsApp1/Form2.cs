@@ -27,6 +27,23 @@ namespace WinFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             label2.Text = _form1.GetItems().Text;
+            switch (_form1.GetItems().Text) {
+                case "Red":
+                    this.BackColor = Color.Red;
+                    break;
+                case "Green":
+                    this.BackColor = Color.Green;
+                    break;
+                case "Blue":
+                    this.BackColor = Color.Blue;
+                    break;
+                case "Yellow":
+                    this.BackColor = Color.Yellow;
+                    break;
+                default:
+                    this.BackColor = Color.Gray;
+                    break;
+            }
         }
     }
 }
