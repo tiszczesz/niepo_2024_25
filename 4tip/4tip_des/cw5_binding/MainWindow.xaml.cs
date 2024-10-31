@@ -16,11 +16,12 @@ namespace cw5_binding
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : INotifyPropertyChanged
     {
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = this;
         }
 
         private int _boundNumber;
@@ -30,13 +31,20 @@ namespace cw5_binding
             set
             {
                 _boundNumber = value;
+                info.Content = _boundNumber;
                 OnPropertyChanged();
             }
         }
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged ;
 
         private void OnPropertyChanged([CallerMemberName] string? propertyName = null) {
-            PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        private void Reset_OnClick(object sender, RoutedEventArgs e) {
+           
+            BoundNumber = 0; 
+            MessageBox.Show(BoundNumber.ToString());
         }
     }
 }

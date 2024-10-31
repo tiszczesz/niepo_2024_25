@@ -13,10 +13,17 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBox Grid.Row="0" Margin="20" ></TextBox>
-        <Slider Grid.Row="1" Minimum="0" Maximum="100" Margin="10"
-                VerticalAlignment="Center"></Slider>
-        <Button Grid.Row="2" Name="Reset" Margin="10">Resetuj</Button>
+        <TextBox Grid.Row="0" Margin="20" 
+                 Text="{Binding Path=BoundNumber, Mode=TwoWay }" ></TextBox>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" >
+             <Slider  Minimum="0" Maximum="100" Margin="10" Width="600"
+                            Value="{Binding Path=BoundNumber, Mode=TwoWay}"
+                            VerticalAlignment="Center"></Slider>
+             <Label Name="info"/>
+             <Label Content="{Binding }"></Label>
+        </StackPanel>
+       
+        <Button Grid.Row="2" Name="Reset" Click="Reset_OnClick" Margin="10">Resetuj</Button>
         <Button Grid.Row="3" Name="NewWindow" Margin="10">Nowe okno</Button>
     </Grid>
 </Window>
