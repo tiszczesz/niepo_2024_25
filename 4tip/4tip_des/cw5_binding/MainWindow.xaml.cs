@@ -46,5 +46,9 @@ namespace cw5_binding
             BoundNumber = 0; 
             MessageBox.Show(BoundNumber.ToString());
         }
+
+        private void OpenWindow_Click(object sender, RoutedEventArgs e) {
+           new SecondWindow().ShowDialog();
+        }
     }
 }

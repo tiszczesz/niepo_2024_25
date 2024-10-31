@@ -20,10 +20,12 @@
                             Value="{Binding Path=BoundNumber, Mode=TwoWay}"
                             VerticalAlignment="Center"></Slider>
              <Label Name="info"/>
-             <Label Content="{Binding }"></Label>
+            
         </StackPanel>
        
         <Button Grid.Row="2" Name="Reset" Click="Reset_OnClick" Margin="10">Resetuj</Button>
-        <Button Grid.Row="3" Name="NewWindow" Margin="10">Nowe okno</Button>
+        <Button Grid.Row="3"
+                Click="OpenWindow_Click"
+                Name="NewWindow" Margin="10">Nowe okno</Button>
     </Grid>
 </Window>
