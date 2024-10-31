@@ -11,6 +11,10 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
         <Label Name="lbInfo" VerticalAlignment="Center" Grid.Row="0"
                 Content="{Binding ElementName=Slider, Path=Value }"
                HorizontalAlignment="Center" FontSize="40" 
@@ -19,6 +23,11 @@
         <Slider Grid.Row="1" VerticalAlignment="Center" Name="Slider"
                 TickFrequency="1" IsSnapToTickEnabled="True"
                 HorizontalAlignment="Center" Minimum="0" Maximum="200" 
-                Value="50" Width="750"></Slider>
+                Value="50" Width="500"></Slider>
+        <Border Grid.Row="1" Grid.Column="1" BorderThickness="20"
+                Opacity="{Binding ElementName=Slider2, Path=Value}"
+                BorderBrush="BlueViolet"></Border>
+        <Slider Name="Slider2" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"
+                Minimum="0" Maximum="1" Value="0.5"></Slider>
     </Grid>
 </Window>
