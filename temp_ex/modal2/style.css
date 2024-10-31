@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.modal {
+    display: none; /* Ukrywa modal domyślnie */
+    position: fixed;
+    z-index: 1; /* Na wierzchu */
+    left: 0;
+    top: 0;
+    width: 100%; /* Pełna szerokość */
+    height: 100%; /* Pełna wysokość */
+    overflow: auto; /* Przewijanie, jeśli to konieczne */
+    background-color: rgba(0, 0, 0, 0.7); /* Przezroczyste tło */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto; /* Wyśrodkowane */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Szerokość modalnego okna */
+    max-width: 500px; /* Maksymalna szerokość */
+    border-radius: 5px; /* Zaokrąglone rogi */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
