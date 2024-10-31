@@ -72,20 +72,29 @@ class MainActivity : AppCompatActivity() {
             //odświeżenie adaptera
             adapterTodo.notifyDataSetChanged()
         }
+        //usuwanie z listy
+        list.setOnItemClickListener { parent, view, position, id ->
+            if(position!=-1){
+                todos.removeAt(position)
+                adapterTodo.notifyDataSetChanged()
+            }
+        }
+
+
         //dla seekbara
-        seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+        seekBar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                progresValue.text = progress.toString()
+                progresValue.text = "saddsad + $progress";
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
-                // TODO("Not yet implemented")
+               // TODO("Not yet implemented")
             }
 
             override fun onStopTrackingTouch(seekBar: SeekBar?) {
-                //  TODO("Not yet implemented")
+               // TODO("Not yet implemented")
             }
-        }
-        )
+        })
+
     }
 }
