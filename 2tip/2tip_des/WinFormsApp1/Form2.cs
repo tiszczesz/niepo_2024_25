@@ -27,7 +27,8 @@ namespace WinFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             label2.Text = _form1.GetItems().Text;
-            switch (_form1.GetItems().Text) {
+            switch (_form1.GetItems().Text)
+            {
                 case "Red":
                     this.BackColor = Color.Red;
                     break;
@@ -44,6 +45,17 @@ namespace WinFormsApp1
                     this.BackColor = Color.Gray;
                     break;
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            label3.Text = _form1.GetDate().SelectionStart.ToShortDateString();
+        }
+
+        private void Form2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //tutaj kod do wykonania po zamknięciu okna
+            _form1.GetLabel().Text = tbForm2.Text.ToUpper();
         }
     }
 }

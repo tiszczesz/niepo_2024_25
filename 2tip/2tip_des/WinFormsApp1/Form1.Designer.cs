@@ -32,6 +32,7 @@
             cbItems = new ComboBox();
             calDate = new MonthCalendar();
             btnShow = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // tbName
@@ -67,11 +68,21 @@
             btnShow.UseVisualStyleBackColor = true;
             btnShow.Click += btnShow_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(647, 208);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 4;
+            label1.Text = "label1";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(btnShow);
             Controls.Add(calDate);
             Controls.Add(cbItems);
@@ -88,5 +99,6 @@
         private ComboBox cbItems;
         private MonthCalendar calDate;
         private Button btnShow;
+        private Label label1;
     }
 }

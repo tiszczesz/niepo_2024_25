@@ -22,5 +22,9 @@ namespace WinFormsApp1
         {
             return calDate;
         }
+
+        public Label GetLabel() {
+            return label1;
+        }
     }
 }
