@@ -10,6 +10,8 @@ string message = "<h1>Hello World!</h1>";
 // app.MapGet("/inna", () => "inna ala ma kota");
 // app.MapGet("/message", () => message);
 app.MapRazorPages();
+app.MapGet("/", () => Results.Redirect("/Page1"));
+app.MapFallbackToPage("/Page1");
 //w katalogu Pages tworzymy plik Index.cshtml
 
 app.Run();
