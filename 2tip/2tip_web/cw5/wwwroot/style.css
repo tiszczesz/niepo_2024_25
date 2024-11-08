@@ -1,12 +1,19 @@
+nav {
+  display: flex;
+  gap: 2rem;
+  padding: 10px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: #888686;
+}
+nav a {
+  font-size: 1.5rem;
+ 
+}
 nav{
-    display: flex;
-    gap: 2rem;
-    padding: 10px;
-}
-a{
-    text-decoration: none;
-    color: black;
-}
-a:hover{
-    color: #888686;
+    background-color: lemonchiffon;
 }
