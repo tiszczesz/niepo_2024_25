@@ -1,0 +1,1 @@
+Ilosc znakow w pliku: plik.txt wynosi: 576
