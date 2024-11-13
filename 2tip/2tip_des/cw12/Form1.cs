@@ -9,13 +9,18 @@ public partial class Form1 : Form
 
     private void btnLoad_Click(object sender, EventArgs e)
     {
-        if (openFileDialog1.ShowDialog() == DialogResult.OK) {
+        if (openFileDialog1.ShowDialog() == DialogResult.OK)
+        {
             //wczytywanie pliku
             // var result = openFileDialog1.FileName;
             // MessageBox.Show(result);
-             var content = File.ReadAllText(openFileDialog1.FileName);
+            var content = File.ReadAllText(openFileDialog1.FileName);
             tbContent.Text = content;
         }
 
+    }
+
+    private void button2_Click(object sender, EventArgs e) {
+        new FormInfo(this).ShowDialog();
     }
 }
