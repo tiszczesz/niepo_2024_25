@@ -58,4 +58,3 @@ Przykład użycia różnych typów kontrolek `input` w formularzu:
 </html>
 ```
 
-Similar code found with 1 license type
