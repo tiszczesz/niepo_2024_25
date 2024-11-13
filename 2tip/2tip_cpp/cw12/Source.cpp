@@ -16,6 +16,7 @@ int main() {
 	ShowContent(container);
 	//zapisywanie do pliku
 	cout << " ===========================\n";
+	cout << stoi("213213213") << endl; //zamiana string na int
 	SaveToFile(container, "wynik.txt", filename);
 	//srand(time(0));
 	//for (int i = 0; i < 50000; i++) {

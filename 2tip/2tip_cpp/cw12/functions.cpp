@@ -14,6 +14,7 @@ void GetFromFile(std::vector<std::string>& container, const std::string& filenam
 		//wczytywanie wszystkich linii z pliku do wektora
 		while (std::getline(fileStream, line)) {
 			container.push_back(line);
+			//container.push_back(stoi(line)); dla wektora intowvector<int>
 		}
 		std::cout << "Plik zostal wczytany" << std::endl;
 		//zamkniecie pliku
@@ -49,4 +50,10 @@ void SaveToFile(
 		      << CountChars(container) << std::endl;
 		fileStream.close();
 	}
+}
+//przeciazanie funkcji
+void GetFromFile(std::vector<int>& container, const std::string& filename) {
+	std::ifstream fileStream;
+	fileStream.open(filename);
+	//itd
 }
