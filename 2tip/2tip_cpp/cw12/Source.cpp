@@ -3,6 +3,7 @@
 #include <vector>
 #include <cstdlib>
 #include "Header.h"
+#include <ctime>
 
 using namespace std;
 int main() {
@@ -16,5 +17,9 @@ int main() {
 	//zapisywanie do pliku
 	cout << " ===========================\n";
 	SaveToFile(container, "wynik.txt", filename);
+	//srand(time(0));
+	//for (int i = 0; i < 50000; i++) {
+	//	cout << rand() << endl;
+	//}
 	return EXIT_SUCCESS;
 }
