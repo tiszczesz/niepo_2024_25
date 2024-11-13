@@ -1,4 +1,4 @@
-W HTML istnieje wiele typów kontrolek `input`, które można użyć w formularzach. Oto niektóre z najczęściej używanych typów:
+W HTML istnieje wiele typów kontrolek `input`, które można użyć w formularzach. Oto lista najczęściej używanych typów:
 
 - `text`: Pole tekstowe do wprowadzania jednowierszowego tekstu.
 - `password`: Pole tekstowe do wprowadzania hasła, gdzie wprowadzone znaki są ukrywane.
@@ -11,6 +11,11 @@ W HTML istnieje wiele typów kontrolek `input`, które można użyć w formularz
 - `submit`: Przycisk do wysyłania formularza.
 - `reset`: Przycisk do resetowania formularza.
 - `button`: Przycisk, który można zaprogramować do wykonania dowolnej akcji.
+- `color`: Pole do wyboru koloru.
+- `tel`: Pole tekstowe do wprowadzania numeru telefonu.
+- `url`: Pole tekstowe do wprowadzania adresu URL.
+- `search`: Pole tekstowe do wprowadzania tekstu wyszukiwania.
+- `range`: Suwak do wyboru wartości z zakresu.
 
 Przykład użycia różnych typów kontrolek `input` w formularzu:
 
@@ -42,6 +47,21 @@ Przykład użycia różnych typów kontrolek `input` w formularzu:
 
         <label for="file">Upload File:</label>
         <input type="file" id="file" name="file"><br><br>
+
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color" name="color"><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone"><br><br>
+
+        <label for="website">Website:</label>
+        <input type="url" id="website" name="website"><br><br>
+
+        <label for="search">Search:</label>
+        <input type="search" id="search" name="search"><br><br>
+
+        <label for="range">Range:</label>
+        <input type="range" id="range" name="range" min="0" max="100"><br><br>
 
         <input type="checkbox" id="subscribe" name="subscribe">
         <label for="subscribe">Subscribe to newsletter</label><br><br>
