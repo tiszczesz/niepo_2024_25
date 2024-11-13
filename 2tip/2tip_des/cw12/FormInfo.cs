@@ -26,10 +26,11 @@ namespace cw12
         }
 
         private void FormInfo_Load(object sender, EventArgs e) {
-            DataGridViewRow row = new DataGridViewRow();
+            //DataGridViewRow row = new DataGridViewRow();
             string[] cels = new[] { "pierwsza", "fffffff" };
-            row.CreateCells(cels);
-            dataGridView1.Rows.Add(row);
+            dataGridView1.Columns.Add("info","informacja");
+            dataGridView1.Columns.Add("value","wartość");
+            dataGridView1.Rows.Add(cels);
         }
     }
 }
