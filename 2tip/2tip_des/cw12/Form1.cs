@@ -19,6 +19,7 @@ public partial class Form1 : Form {
             var content = File.ReadAllLines(openFileDialog1.FileName);
             tbContent.Lines = content;
             TextInfo = new FileTextInfo(content);
+            
         }
 
     }
