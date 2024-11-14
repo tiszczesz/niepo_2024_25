@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using cw12.ViewModels;
 
 namespace cw12
 {
@@ -27,10 +28,14 @@ namespace cw12
 
         private void FormInfo_Load(object sender, EventArgs e) {
             //DataGridViewRow row = new DataGridViewRow();
-            string[] cels = new[] { "pierwsza", "fffffff" };
-            dataGridView1.Columns.Add("info","informacja");
-            dataGridView1.Columns.Add("value","wartość");
-            dataGridView1.Rows.Add(cels);
+            string[] cells = new[] { "pierwsza", "fffffff" };
+            dataGridView1.Columns.Add("info", "informacja");
+            dataGridView1.Columns.Add("value", "wartość");
+            var textInfoDGV = new TextInfoToDGV(_form1.TextInfo);
+            foreach (var row in textInfoDGV.GetInfo())
+            {
+                dataGridView1.Rows.Add(row);
+            }
         }
     }
 }

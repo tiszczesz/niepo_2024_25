@@ -1,7 +1,9 @@
+using cw12.Models;
+
 namespace cw12;
 
-public partial class Form1 : Form
-{
+public partial class Form1 : Form {
+    public FileTextInfo TextInfo;
     public Form1()
     {
         InitializeComponent();
@@ -14,8 +16,9 @@ public partial class Form1 : Form
             //wczytywanie pliku
             // var result = openFileDialog1.FileName;
             // MessageBox.Show(result);
-            var content = File.ReadAllText(openFileDialog1.FileName);
-            tbContent.Text = content;
+            var content = File.ReadAllLines(openFileDialog1.FileName);
+            tbContent.Lines = content;
+            TextInfo = new FileTextInfo(content);
         }
 
     }
