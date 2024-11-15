@@ -1,4 +1,4 @@
-import csharp from '../assets/c#.jpg';
+import csharp from '../assets/csharp.jpg';
 import java from '../assets/java.png';
 import js from '../assets/js.png';
 import kotlin from '../assets/kotlin.png';
