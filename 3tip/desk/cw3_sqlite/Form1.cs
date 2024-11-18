@@ -10,6 +10,7 @@ namespace cw3_sqlite
         {
             InitializeComponent();
             _repo = new AnimalsRepo();
+            string setting1 = Program.Configuration["AppSettings:Setting1"];
         }
 
         private void Form1_Load(object sender, EventArgs e)
