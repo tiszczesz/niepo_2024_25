@@ -22,7 +22,13 @@ namespace cw12.ViewModels
             rows.Add(row);
             rows.Add(new[]{"Ilość wyrazów",
                 _fileTextInfo.GetCountWords().ToString()});
+            rows.Add(new[]{"Ilość znaków",
+                _fileTextInfo.GetCountChars().ToString() });
+            rows.Add(new[]{"Ilość liter",
+                _fileTextInfo.GetCountLetters().ToString() });
+           
             return rows;
         }
+        
     }
 }

@@ -30,7 +30,7 @@ partial class Form1
     {
         panel1 = new Panel();
         button3 = new Button();
-        button2 = new Button();
+        btnInfo = new Button();
         btnLoad = new Button();
         tbContent = new TextBox();
         openFileDialog1 = new OpenFileDialog();
@@ -41,7 +41,7 @@ partial class Form1
         // 
         panel1.BackColor = Color.FromArgb(255, 255, 192);
         panel1.Controls.Add(button3);
-        panel1.Controls.Add(button2);
+        panel1.Controls.Add(btnInfo);
         panel1.Controls.Add(btnLoad);
         panel1.Dock = DockStyle.Left;
         panel1.Location = new Point(0, 0);
@@ -58,16 +58,16 @@ partial class Form1
         button3.Text = "button3";
         button3.UseVisualStyleBackColor = true;
         // 
-        // button2
+        // btnInfo
         // 
-        button2.Enabled = false;
-        button2.Location = new Point(12, 74);
-        button2.Name = "button2";
-        button2.Size = new Size(166, 43);
-        button2.TabIndex = 1;
-        button2.Text = "Informacje o tekście";
-        button2.UseVisualStyleBackColor = true;
-        button2.Click += button2_Click;
+        btnInfo.Enabled = false;
+        btnInfo.Location = new Point(12, 74);
+        btnInfo.Name = "btnInfo";
+        btnInfo.Size = new Size(166, 43);
+        btnInfo.TabIndex = 1;
+        btnInfo.Text = "Informacje o tekście";
+        btnInfo.UseVisualStyleBackColor = true;
+        btnInfo.Click += button2_Click;
         // 
         // btnLoad
         // 
@@ -85,6 +85,7 @@ partial class Form1
         tbContent.Location = new Point(200, 0);
         tbContent.Multiline = true;
         tbContent.Name = "tbContent";
+        tbContent.ReadOnly = true;
         tbContent.Size = new Size(600, 450);
         tbContent.TabIndex = 1;
         // 
@@ -113,7 +114,7 @@ partial class Form1
     private Panel panel1;
     private TextBox tbContent;
     private Button button3;
-    private Button button2;
+    private Button btnInfo;
     private Button btnLoad;
     private OpenFileDialog openFileDialog1;
 }

@@ -25,5 +25,33 @@ namespace cw12.Models
         public FileTextInfo(string[] lines) {
             contentFile = lines;
         }
+
+        public int GetCountChars() {
+            int result = 0;
+            //todo
+            foreach (var line in contentFile) {
+                result += line.Length;
+            }
+            return result;
+        }
+        public int GetCountLetters()
+        {
+            int result = 0;
+            //todo
+            //Char.IsLetter('z');
+            foreach (var line in contentFile)
+            {
+                foreach (var c in line)
+                {
+                    if (Char.IsLetter(c))
+                    {
+                        result++;
+                    }
+                }
+            }
+            return result;
+        }
     }
+
+  
 }

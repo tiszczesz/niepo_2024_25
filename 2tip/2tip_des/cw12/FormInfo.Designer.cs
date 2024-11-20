@@ -31,6 +31,8 @@
             dataGridView1 = new DataGridView();
             panel1 = new Panel();
             button1 = new Button();
+            button2 = new Button();
+            saveFileDialog1 = new SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -46,6 +48,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
             panel1.Dock = DockStyle.Bottom;
             panel1.Location = new Point(0, 265);
@@ -62,6 +65,16 @@
             button1.Text = "Zamknij";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(166, 18);
+            button2.Name = "button2";
+            button2.Size = new Size(128, 37);
+            button2.TabIndex = 1;
+            button2.Text = "Zapisz do pliku";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // FormInfo
             // 
@@ -85,5 +98,7 @@
         private DataGridView dataGridView1;
         private Panel panel1;
         private Button button1;
+        private Button button2;
+        private SaveFileDialog saveFileDialog1;
     }
 }
