@@ -37,31 +37,41 @@
                 <label class="col-3 text-end">Wybierz płeć:</label>
             </div>
             <div class="row m-2">
-                <label class="col-3 text-end" for="m">Mężczyzna</label>
-                <input class="col-3" type="radio" id="m" value="m" name="gender" required>
-
-                <label class="col-3 text-end" for="f">Kobieta</label>
-
-                <input checked
-                    class="col-3" type="radio" id="f" value="f" name="gender" required>
-
+                <div class="col-6 offset-3" style="padding: 0px;">
+                    <input type="radio" id="m" value="m" name="gender">
+                    <label for="m">Mężczyzna</label>
+                </div>
+                <div class="col-6 offset-3" style="padding: 0px;">
+                    <input type="radio" id="k" value="k" name="gender">
+                    <label for="m">Kobieta</label>
+                </div>
             </div>
             <div class="row m-2">
-                <label for="hobby">Zainteresowania:</label>
+                <label class="col-3 text-end" for="hobby">Zainteresowania:</label>
             </div>
-            <div class="m-2">
-                książki: <input class="col-6 offset-3" type="checkbox" name="hobby[]"
-                    value="książki"><br>
-                muzyka: <input class="col-6 offset-3" type="checkbox" name="hobby[]"
-                    value="muzyka"><br>
-                sport: <input class="col-6 offset-3" type="checkbox" name="hobby[]"
-                    value="sport"><br>
+            <div class="col-6 offset-3">
+                <input type="checkbox" name="hobby[]" value="książki">
+                <label for="">książki</label>
             </div>
-            <div class="row m-2">
-                <input type="submit" class="col-6 offset-3 btn btn-primary">
+            <div class="col-6 offset-3">
+                <input type="checkbox" name="hobby[]" value="muzyka">
+                <label for="">muzyka</label>
             </div>
-       
-        </form>
+            <div class="col-6 offset-3">
+                <input type="checkbox" name="hobby[]" value="sport">
+                <label for="">sport</label>
+            </div>
+
+    </div>
+    <div class="row m-2">
+        <label class="col-3 text-end" for="color">wybierz kolor</label>
+        <input class="col-6" type="color" name="color">
+    </div>
+    <div class="row m-2">
+        <input type="submit" class="col-6 offset-3 btn btn-primary">
+    </div>
+
+    </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
