@@ -1,0 +1,34 @@
+﻿@page
+@model razorPage_checkbox.Pages.RazorCheckBoxWithModelModel
+@{
+}
+
+
+
+<form method="post" asp-page="RazorCheckBoxWithModel">
+    <div>
+       @for (int i = 0; i < Model.CheckboxItems.Count; i++)
+        {
+            <div>
+                <input type="hidden" asp-for="CheckboxItems[i].IsChecked" value="false" />
+                <input type="checkbox" asp-for="CheckboxItems[i].IsChecked" />
+                <input type="hidden" asp-for="CheckboxItems[i].Value" />
+                <label asp-for="CheckboxItems[i].IsChecked">@Model.CheckboxItems[i].Text</label>
+            </div>
+        }
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
+@if (ViewData["SelectedItems"] != null)
+{
+    <div>
+        <h3>Selected items:</h3>
+        <ul>
+            @foreach (var item in (ViewData["SelectedItems"] as List<string>))
+            {
+                <li>Wybrana opcja: @item</li>
+            }
+        </ul>
+    </div>
+}
