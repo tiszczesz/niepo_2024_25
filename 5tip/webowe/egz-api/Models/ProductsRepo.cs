@@ -18,6 +18,10 @@ public class ProductsRepo
         cmd.CommandText = "SELECT * FROM Product";
         conn.Open();
         SqliteDataReader reader = cmd.ExecuteReader();
+        if(!reader.HasRows){
+            conn.Close();
+            return products;
+        }
         while(reader.Read()){
             products.Add(
                 new Product{
