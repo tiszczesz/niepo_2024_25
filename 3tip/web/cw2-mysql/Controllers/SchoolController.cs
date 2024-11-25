@@ -1,17 +1,28 @@
+using cw2_mysql.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace cw2_mysql.Controllers
 {
     public class SchoolController : Controller
     {
+        private readonly StudentsRepo _repo;
+        public SchoolController(IConfiguration configuration)
+        {
+            _repo =  new StudentsRepo(configuration);
+        }
         // GET: SchoolController
         public ActionResult Index()
         {
             return View();
         }
+        public IActionResult GroupsList(){
+            var groups = _repo.GetGroups();
+            return View(groups);
+        }
         public IActionResult StudentsList()
         {
-            return View();
+            var students = _repo.GetStudents();
+            return View(students);
         }
 
     }

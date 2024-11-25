@@ -16,7 +16,8 @@ public class StudentsRepo
         //wypełnianie listy studentów z bazy danych
         using MySqlConnection conn = new MySqlConnection(_connString);
         MySqlCommand cmd = conn.CreateCommand();
-        cmd.CommandText = "SELECT * FROM students";
+        cmd.CommandText = "SELECT students.id,firstname,lastname,group_id, groups.name as name FROM students "
+             +"inner join groups on students.group_id = groups.id";
         conn.Open();
         using MySqlDataReader reader = cmd.ExecuteReader();
         while (reader.Read())
@@ -26,9 +27,29 @@ public class StudentsRepo
             student.Firstname = reader.GetString("firstname");
             student.Lastname = reader.GetString("lastname");
             student.GroupId = reader.GetInt32("group_id");
+            student.GroupName = reader.GetString("name");   
             students.Add(student);
         }
         conn.Close();
         return students;
+    }
+    public List<Group> GetGroups(){
+        List<Group> groups = new List<Group>();
+        //wypełnianie listy grup z bazy danych
+        using MySqlConnection conn = new MySqlConnection(_connString);
+        MySqlCommand cmd = conn.CreateCommand();
+        cmd.CommandText = "SELECT * FROM groups";
+        conn.Open();
+        using MySqlDataReader reader = cmd.ExecuteReader();
+        while(reader.Read()){
+            groups.Add(new Group{
+                Id = reader.GetInt32("id"),
+                Name = reader.GetString("name"),
+                Description = reader.GetString("description"),
+                Teacher = reader.GetString("teacher")
+            });
+        }
+
+        return groups;
     }
 }

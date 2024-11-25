@@ -1,0 +1,24 @@
+﻿@model List<cw2_mysql.Models.Group>
+<h1>Lista grup</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Lp</th>
+            <th>Nazwa grupy</th>
+            <th>Opis grupy</th>
+            <th>Opiekun</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{int lp = 0;}
+        @foreach(var group in Model){
+            lp++;
+            <tr>
+                <td>@lp</td>
+                <td>@group.Name</td>
+                <td>@group.Description</td>
+                <td>@group.Teacher</td>
+            </tr>
+        }
+    </tbody>
+</table>
