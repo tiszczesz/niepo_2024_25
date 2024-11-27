@@ -19,3 +19,11 @@ function getFood():array { //do checkboxes
         'Kotlet' => 9.99
     ];
 }
+function generSelect(array $data, string $name):string{
+    $html = "<select name=\"{$name}\">";
+    foreach($data as $key => $value){
+        $html .= "<option value=\"{$value}\">{$key}</option>";
+    }
+    $html .= "</select>";
+    return $html;
+}
