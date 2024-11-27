@@ -5,6 +5,7 @@ CREATE TABLE products(
     price REAL,
     description TEXT
 )
+Drop table products;
 
 INSERT INTO products (name, price, description) VALUES ('Jabłka', 23.5, 'pyszne czerwone');
 INSERT INTO products (name, price, description) VALUES ('Gruszki', 33.5, 'słodziutkie');
