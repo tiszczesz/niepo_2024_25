@@ -1,6 +1,6 @@
 ﻿@model List<cw2_mysql.Models.Student>
 
-<h1>Lista studentów z grupy: </h1>
+<h1>Lista studentów z grupy: @ViewBag.Group.Name wychowawca: @ViewBag.Group.Teacher</h1>
 <ol>
     @foreach(var student in Model){
         <li>@student.Firstname @student.Lastname</li>
