@@ -10,12 +10,18 @@
         </tr>
     </thead>
     <tbody>
-        @{int lp = 0;}
-        @foreach(var group in Model){
+        @{
+            int lp = 0;
+        }
+        @foreach (var group in Model)
+        {
             lp++;
             <tr>
                 <td>@lp</td>
-                <td>@group.Name</td>
+                <td>
+                    <a asp-action="StudentsGroup" asp-route-id="@group.Id">@group.Name</a>
+
+                </td>
                 <td>@group.Description</td>
                 <td>@group.Teacher</td>
             </tr>

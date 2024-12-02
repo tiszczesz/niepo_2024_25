@@ -52,4 +52,30 @@ public class StudentsRepo
 
         return groups;
     }
+
+    public List<Student> GetStudentsByGroup(int? id)
+    {
+        List<Student> students = new ();
+        using MySqlConnection conn = new MySqlConnection(_connString);
+        MySqlCommand cmd = conn.CreateCommand();
+        cmd.CommandText = $"SELECT id,firstname,lastname,group_id from students WHERE group_id={id} " ;
+        conn.Open();
+        using MySqlDataReader reader = cmd.ExecuteReader();
+        while (reader.Read())
+        {
+            Student student = new Student();
+            student.Id = reader.GetInt32("id");
+            student.Firstname = reader.GetString("firstname");
+            student.Lastname = reader.GetString("lastname");
+            student.GroupId = reader.GetInt32("group_id");
+            students.Add(student);
+        }
+        conn.Close();
+        return students;
+     }
+
+    internal Group GetGroupById(int? id)
+    {
+        throw new NotImplementedException();
+    }
 }
