@@ -29,7 +29,7 @@ namespace cw2_mysql.Controllers
             if(id == null) return RedirectToAction(nameof(GroupsList));
             //if(id == null) return RedirectToAction("GroupsList");
             var students = _repo.GetStudentsByGroup(id);
-            Group group = _repo.GetGroupById(id);
+            Group? group = _repo.GetGroupById(id);
             ViewBag.Group = group;
             return View(students);
         }

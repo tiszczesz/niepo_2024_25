@@ -87,6 +87,7 @@ public class StudentsRepo
         Group? gruop = null;
         if (reader.HasRows)
         {
+            reader.Read();
             gruop = new Group()
             {
                 Id = reader.GetInt32("id"),
@@ -95,6 +96,7 @@ public class StudentsRepo
                 Teacher = reader.GetString("teacher")
             };
         }
+        conn.Close();
         return gruop;   
     }
 }
