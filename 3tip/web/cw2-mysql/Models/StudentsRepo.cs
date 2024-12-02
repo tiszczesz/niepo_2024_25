@@ -74,7 +74,7 @@ public class StudentsRepo
         return students;
      }
 
-    internal Group GetGroupById(int? id)
+    public Group GetGroupById(int? id)
     {
         throw new NotImplementedException();
     }
