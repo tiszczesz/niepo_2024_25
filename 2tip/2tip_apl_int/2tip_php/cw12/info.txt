@@ -1,0 +1,9 @@
+Different operating system families have different line-ending conventions. 
+When you write a text file and want to insert a line break, you need to use the correct 
+line-ending character(s) for your operating system. Unix based systems use \n as the line ending 
+character, Windows based systems use \r\n as the line ending characters and Macintosh based systems 
+(Mac OS Classic) used \r as the line ending character.
+If you use the wrong line ending characters when writing your files, you might find that other 
+applications that open those files will "look funny".
+Windows offers a text-mode translation flag ('t') which will transparently translate \n to \r\n when 
+working with the file. In contrast, you can also use 'b' to force binary mode, which will not translate your data. To use these flags, specify either 'b' or 't' as the last character of the mode parameter. 
