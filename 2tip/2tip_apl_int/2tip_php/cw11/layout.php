@@ -21,7 +21,7 @@
     <?php
      include 'router.php';
         $page = $_GET['page'] ?? 'home';
-        var_dump($page);
+        //var_dump($page);
         echo getPage($page);
     ?>
     </main>

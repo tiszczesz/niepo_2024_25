@@ -1,4 +1,10 @@
 <?php
+if (!isset($_GET['page']) || $_GET['page'] !== 'about') {
+    header('Location: layout.php?page=home');
+    exit();
+}
+
+
 $html = <<<html
 
 <h1>Strona O firmie</h1>

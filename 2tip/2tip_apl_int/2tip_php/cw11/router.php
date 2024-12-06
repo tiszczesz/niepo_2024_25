@@ -1,16 +1,22 @@
 <?php
 
-function getPage(string $page) : string {
-    switch($page){
+function getPage(string $page): string
+{
+    switch ($page) {
         case 'home':
             include 'home.php';
             return $html;
         case 'form':
-            return 'form.php';
+            include 'form.php';
+            return $html;
         case 'about':
-            return 'about.php';
+            include 'about.php';
+            return $html;
         default:
             return 'home.php';
     }
-    
 }
+
+//if(!isset($_GET['page'])){
+
+//}
