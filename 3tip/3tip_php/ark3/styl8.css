@@ -1,0 +1,48 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Georgia;
+}
+#logo,
+#menu {
+  background: #63ac74;
+  color: Orange;
+  height: 140px;
+  width: 50%;
+  text-align: right;
+  font-size: 160%;
+}
+#glowny {
+  background: #e3f6e7;
+  height: 500px;
+  padding: 20px;
+}
+#stopka1,
+#stopka2,
+#stopka3,
+#stopka4 {
+  background: #63ac74;
+  height: 150px;
+  width: 25%;
+}
+a {
+  color: Orange;
+  margin: 15px;
+}
+table {
+  width: 100%;
+  border: 2px solid green;
+}
+th {
+  background: #63ac74;
+  color: white;
+}
+td:last-child {
+  text-align: right;
+}
+footer {
+  display: flex;
+}
+header {
+  display: flex;
+}
