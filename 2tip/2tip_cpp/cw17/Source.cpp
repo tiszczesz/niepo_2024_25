@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <cstdio>
-
 #include <filesystem>
 using namespace std;
 namespace fs = std::filesystem;
@@ -22,8 +21,9 @@ void cw1() {
 	string n1 = "ala";
 	auto gg = n1.c_str();
 	char zmienna[100];
-	scanf_s("%s", zmienna);
+	scanf_s("%s", zmienna,_countof(zmienna));
 	printf_s(zmienna);
+	cout << '\n' <<strlen(zmienna) << endl;
 	string n2 = "ma";
 	string n3 = "kota";
 	string result2 = n1 + " " + n2 + " " + n3;
@@ -46,7 +46,7 @@ void ScanDir(const std::string path) {
 //ale uzywamy tylko scanf printf c-stringi
 int main()
 {
-	//cw1();
+	cw1();
 	char napis1[] = "ala";
 	char napis2[] = "ma";
 	cout << getSize(napis1) << endl;
