@@ -1,3 +1,4 @@
+using cw8.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace cw8.Controllers
@@ -6,8 +7,8 @@ namespace cw8.Controllers
     {
         // GET: CarController
         public ActionResult Index()
-        {
-            return View();
+        {            
+            return View(CarsRepo.GetCars());
         }
 
     }

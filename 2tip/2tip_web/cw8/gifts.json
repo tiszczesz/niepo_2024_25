@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Toy Car",
+        "price": 10.99,
+        "owner": "John"
+    },
+    {
+        "name": "Doll",
+        "price": 15.49,
+        "owner": "Jane"
+    },
+    {
+        "name": "Lego Set",
+        "price": 29.99,
+        "owner": "Mike"
+    },
+    {
+        "name": "Puzzle",
+        "price": 9.99,
+        "owner": "Anna"
+    },
+    {
+        "name": "Board Game",
+        "price": 19.99,
+        "owner": "Tom"
+    },
+    {
+        "name": "Action Figure",
+        "price": 12.99,
+        "owner": "Sara"
+    },
+    {
+        "name": "Book",
+        "price": 8.99,
+        "owner": "Emma"
+    },
+    {
+        "name": "Stuffed Animal",
+        "price": 14.99,
+        "owner": "Chris"
+    },
+    {
+        "name": "RC Helicopter",
+        "price": 39.99,
+        "owner": "Alex"
+    },
+    {
+        "name": "Video Game",
+        "price": 49.99,
+        "owner": "Sam"
+    }
+]

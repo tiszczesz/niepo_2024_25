@@ -1,4 +1,31 @@
-﻿@model List<cw8.Models.Car>
+﻿@model List<MyCar>
 <h3>
     Strona o samochodach
 </h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Lp</th>
+            <th>Model</th>
+            <th>Marka</th>
+            <th>Rok</th>
+            <th>Kolor</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int lp = 0;
+        }
+        @foreach (var car in Model)
+        {
+            lp++;
+            <tr>
+                <td>@lp</td>
+                <td>@car.Model</td>
+                <td>@car.Brand</td>
+                <td>@car.Year</td>
+                <td>@car.Color</td>
+            </tr>
+        }
+    </tbody>
+</table>
