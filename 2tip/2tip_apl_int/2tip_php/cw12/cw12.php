@@ -26,6 +26,7 @@
         foreach ($words as $word) {
             fwrite($file, $word . "-");
         }
+        fwrite($file, PHP_EOL);
         fclose($file);
     } else {
         echo "Nie udało się otworzyć pliku";
