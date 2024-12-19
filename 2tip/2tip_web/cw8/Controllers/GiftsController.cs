@@ -13,6 +13,16 @@ namespace cw8.Controllers
         // GET: GiftsController
         public ActionResult List()
         {
+            return View(_myGiftsRepo.MyGifts);
+        }
+        [HttpGet]
+        public IActionResult AddGift()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AddGift(MyGift myGift)
+        {
             return View();
         }
 

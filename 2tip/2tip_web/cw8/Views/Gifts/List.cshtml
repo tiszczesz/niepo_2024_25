@@ -1,3 +1,32 @@
 ﻿@model List<MyGift>
 
-    <h1>Lista prezentów</h1>
+<h1>Lista prezentów</h1>
+
+<div>
+    <a asp-action="AddGift" class="btn btn-primary">Dodaj nowy prezent</a>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Lp</th>
+            <th>Nazwa</th>
+            <th>Cena</th>
+            <th>Właściciel</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int lp = 0;
+        }
+        @foreach (var g in Model)
+        {
+            lp++;
+            <tr>
+                <td>@lp</td>
+                <td>@g.Name</td>
+                <td>@g.Price</td>
+                <td>@g.Owner</td>
+            </tr>
+        }
+    </tbody>
+</table>
