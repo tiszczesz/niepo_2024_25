@@ -1,52 +1,52 @@
 [
     {
-        "name": "Toy Car",
-        "price": 10.99,
-        "owner": "John"
+        "Name": "Toy Car",
+        "Price": 10.99,
+        "Owner": "John"
     },
     {
-        "name": "Doll",
-        "price": 15.49,
-        "owner": "Jane"
+        "Name": "Doll",
+        "Price": 15.49,
+        "Owner": "Jane"
     },
     {
-        "name": "Lego Set",
-        "price": 29.99,
-        "owner": "Mike"
+        "Name": "Lego Set",
+        "Price": 29.99,
+        "Owner": "Mike"
     },
     {
-        "name": "Puzzle",
-        "price": 9.99,
-        "owner": "Anna"
+        "Name": "Puzzle",
+        "Price": 9.99,
+        "Owner": "Anna"
     },
     {
-        "name": "Board Game",
-        "price": 19.99,
-        "owner": "Tom"
+        "Name": "Board Game",
+        "Price": 19.99,
+        "Owner": "Tom"
     },
     {
-        "name": "Action Figure",
-        "price": 12.99,
-        "owner": "Sara"
+        "Name": "Action Figure",
+        "Price": 12.99,
+        "Owner": "Sara"
     },
     {
-        "name": "Book",
-        "price": 8.99,
-        "owner": "Emma"
+        "Name": "Book",
+        "Price": 8.99,
+        "Owner": "Emma"
     },
     {
-        "name": "Stuffed Animal",
-        "price": 14.99,
-        "owner": "Chris"
+        "Name": "Stuffed Animal",
+        "Price": 14.99,
+        "Owner": "Chris"
     },
     {
-        "name": "RC Helicopter",
-        "price": 39.99,
-        "owner": "Alex"
+        "Name": "RC Helicopter",
+        "Price": 39.99,
+        "Owner": "Alex"
     },
     {
-        "name": "Video Game",
-        "price": 49.99,
-        "owner": "Sam"
+        "Name": "Video Game",
+        "Price": 49.99,
+        "Owner": "Sam"
     }
 ]
