@@ -6,3 +6,16 @@ Book::Book(std::string title, std::string author, int year, int pages) {
 	this->year = year;
 	this->pages = pages;
 }
+Book::Book() {
+	this->title = "Brak tytulu";
+	this->author = "Brak autora";
+	this->year = 0;
+	this->pages = 0;
+}
+void Book::Show() {
+	std::cout << "Tytul: " << title << std::endl;
+	std::cout << "Autor: " << author << std::endl;
+	std::cout << "Rok wydania: " << year << std::endl;
+	std::cout << "Liczba stron: " << pages << std::endl;
+}
+
