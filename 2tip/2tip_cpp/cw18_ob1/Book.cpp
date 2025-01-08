@@ -18,4 +18,18 @@ void Book::Show() {
 	std::cout << "Rok wydania: " << year << std::endl;
 	std::cout << "Liczba stron: " << pages << std::endl;
 }
+void Book::Show(bool isBorder) {
+	if (isBorder) {
+		std::cout << "-------------------" << std::endl;
+	}else {
+		std::cout << " =================== " << std::endl;
+	}
+	Show();//to nie jest rekurencja, tylko wywolanie innej metody
+	if (isBorder) {
+		std::cout << "-------------------" << std::endl;
+	}
+	else {
+		std::cout << " =================== " << std::endl;
+	}
+}
 
