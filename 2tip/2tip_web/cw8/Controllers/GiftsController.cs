@@ -18,11 +18,13 @@ namespace cw8.Controllers
         [HttpGet]
         public IActionResult AddGift()
         {
+            //wyświetlenie formularza pustego
             return View();
         }
         [HttpPost]
         public IActionResult AddGift(MyGift myGift)
         {
+            //przetwarzanie danych z formularza
             return View();
         }
 

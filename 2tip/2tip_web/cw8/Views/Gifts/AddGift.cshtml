@@ -3,6 +3,22 @@
 <h1>Dodaj nowy prezent</h1>
 <form asp-action="AddGift" method="post">
     <div class="row m-2">
-        
+        <label class="col-3 text-end" asp-for="Name"></label>
+        <input class="col-6" asp-for="Name" />
+        <span class="col-3 text-danger" asp-validation-for="Name"></span>
+    </div>
+    <div class="row m-2">
+        <label class="col-3 text-end" asp-for="Price"></label>
+        <input class="col-6" asp-for="Price" type="number" step="0.01" />
+        <span class="col-3 text-danger" asp-validation-for="Price"></span>
+    </div>
+    <div class="row m-2">
+        <label class="col-3 text-end" asp-for="Owner"></label>
+        <input class="col-6" asp-for="Owner"  />
+        <span class="col-3 text-danger" asp-validation-for="Owner"></span>
+    </div>
+    <div class="row m-2">        
+        <input type="submit" class="offset-3 col-3"  value="Zapisz"  />
+        <input type="reset" class="col-3"  value="Wyczyść"  />        
     </div>
 </form>
