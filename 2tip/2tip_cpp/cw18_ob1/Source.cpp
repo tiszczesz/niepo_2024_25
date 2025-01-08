@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Book.h"
+#include "BooksRepo.h"
 
 using namespace std;
 
@@ -14,5 +15,11 @@ int main() {
 	cout << "-------------------" << endl;
 	book2.Show(true);
 	book3.Show(false);
+	cout << "-------------------" << endl;
+	cout << "-------------------" << endl;
+	vector<Book> books = BooksRepo::GetBooks();//odwolanie do metody GetBooks z klasy BooksRepo
+	for (auto book : books) {
+		book.Show(true);		
+	}
 	return 0;
 }
