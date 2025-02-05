@@ -31,5 +31,21 @@ public:
 		delete[] arr;
 		arr = nullptr;
 	}
+	int SearchArray(int toFind) {
+		for (int i=0;i<size;i++) {
+			if (toFind == arr[i]) return i;
+		}
+		return -1;
+	}
+	int ShowOdd() {
+		int count = 0;
+		for (int i = 0; i < size; i++) {
+			if (arr[i] % 2 != 0) {
+				cout  << arr[i] << endl;
+				count++;
+			}
+		}
+		return count;
+	}
 };
 
