@@ -47,5 +47,26 @@ public:
 		}
 		return count;
 	}
+	double GetAvg() {
+		if (size < 1) return -1;
+		double sum = 0;
+		for (int i = 0; i < size; i++) {
+			sum += arr[i];
+		}
+		return sum / size;
+	}
+	//zaprzyjaŸnienie operatora << z klas¹ Array
+	friend std::ostream& operator<<(std::ostream& os, const Array& arr);
 };
+
+//implementacja przeci¹¿enia operatora <<
+std::ostream& operator<<(std::ostream& os ,const Array& arr) {
+	os << " ===========================" << endl;
+	os << "Tablica o rozmiarze: " << arr.size<<endl;
+	for (int i = 0;i<arr.size;i++) {
+		os << i << " : " << arr.arr[i] << endl;
+	}
+	os << " ===========================" << endl;
+	return os;
+}
 
