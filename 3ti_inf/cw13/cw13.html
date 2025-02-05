@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cw13.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Liczby pierwsze</h1>
+    </header>
+    <main>
+        <section class="info">
+            <form>
+                <fieldset>
+                    <legend>Dane do tabelki</legend>
+                    <div class="line">
+                        <label for="rows">Liczba wierszy</label>
+                        <input type="number" id="rows" value="20" min="1" max="200">
+                        <span class="error"></span>
+                    </div>
+                    <div class="line">
+                        <label for="cols">Liczba kolumn</label>
+                        <input type="number" id="cols" value="20" min="1" max="200">
+                        <span class="error"></span>
+                    </div>
+                    <div class="line">
+                        <button type="submit">Generuj</button>
+                        <button type="reset">Resetuj</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+        <section class="result">
+
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+
+    <script src="cw13.js" defer></script>
+</body>
+
+</html>
