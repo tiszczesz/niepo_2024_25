@@ -12,6 +12,7 @@
             <th>Nazwa</th>
             <th>Cena</th>
             <th>Właściciel</th>
+            <th> ----- </th>
         </tr>
     </thead>
     <tbody>
@@ -26,6 +27,11 @@
                 <td>@g.Name</td>
                 <td>@g.Price</td>
                 <td>@g.Owner</td>
+                <td>
+                    <a class="btn btn-danger" asp-action="DeleteGift" asp-route-id="@(lp-1)">
+                        Usuń prezent
+                    </a>
+                </td>
             </tr>
         }
     </tbody>
