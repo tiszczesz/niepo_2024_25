@@ -1,5 +1,6 @@
 fun main(){
  //cc1()
+    cc2()
 }
 fun cc1(){
     val a = 12 //niemutowalna
