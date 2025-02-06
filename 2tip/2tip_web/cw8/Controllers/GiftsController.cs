@@ -24,7 +24,12 @@ namespace cw8.Controllers
         [HttpPost]
         public IActionResult AddGift(MyGift myGift)
         {
-            //przetwarzanie danych z formularza
+            if(ModelState.IsValid){
+                //przetwarzanie danych z formularza
+                _myGiftsRepo.MyGifts.Add(myGift);
+                _myGiftsRepo.Save();
+                return RedirectToAction("List");
+            }            
             return View();
         }
 

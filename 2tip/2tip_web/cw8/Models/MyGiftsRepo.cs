@@ -12,5 +12,10 @@ public class MyGiftsRepo
         var json = File.ReadAllText(_fileName);
         MyGifts = JsonSerializer.Deserialize<List<MyGift>>(json) ?? new List<MyGift>();
     }
+    public void Save()
+    {
+        var json = JsonSerializer.Serialize(MyGifts, new JsonSerializerOptions { WriteIndented = true });
+        File.WriteAllText(_fileName, json);
+    }
 
 }

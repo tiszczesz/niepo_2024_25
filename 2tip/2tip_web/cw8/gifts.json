@@ -1,52 +1,62 @@
 [
-    {
-        "Name": "Toy Car",
-        "Price": 10.99,
-        "Owner": "John"
-    },
-    {
-        "Name": "Doll",
-        "Price": 15.49,
-        "Owner": "Jane"
-    },
-    {
-        "Name": "Lego Set",
-        "Price": 29.99,
-        "Owner": "Mike"
-    },
-    {
-        "Name": "Puzzle",
-        "Price": 9.99,
-        "Owner": "Anna"
-    },
-    {
-        "Name": "Board Game",
-        "Price": 19.99,
-        "Owner": "Tom"
-    },
-    {
-        "Name": "Action Figure",
-        "Price": 12.99,
-        "Owner": "Sara"
-    },
-    {
-        "Name": "Book",
-        "Price": 8.99,
-        "Owner": "Emma"
-    },
-    {
-        "Name": "Stuffed Animal",
-        "Price": 14.99,
-        "Owner": "Chris"
-    },
-    {
-        "Name": "RC Helicopter",
-        "Price": 39.99,
-        "Owner": "Alex"
-    },
-    {
-        "Name": "Video Game",
-        "Price": 49.99,
-        "Owner": "Sam"
-    }
+  {
+    "Name": "Toy Car",
+    "Price": 10.99,
+    "Owner": "John"
+  },
+  {
+    "Name": "Doll",
+    "Price": 15.49,
+    "Owner": "Jane"
+  },
+  {
+    "Name": "Lego Set",
+    "Price": 29.99,
+    "Owner": "Mike"
+  },
+  {
+    "Name": "Puzzle",
+    "Price": 9.99,
+    "Owner": "Anna"
+  },
+  {
+    "Name": "Board Game",
+    "Price": 19.99,
+    "Owner": "Tom"
+  },
+  {
+    "Name": "Action Figure",
+    "Price": 12.99,
+    "Owner": "Sara"
+  },
+  {
+    "Name": "Book",
+    "Price": 8.99,
+    "Owner": "Emma"
+  },
+  {
+    "Name": "Stuffed Animal",
+    "Price": 14.99,
+    "Owner": "Chris"
+  },
+  {
+    "Name": "RC Helicopter",
+    "Price": 39.99,
+    "Owner": "Alex"
+  },
+  {
+    "Name": "Video Game",
+    "Price": 49.99,
+    "Owner": "Sam"
+  },
+  {
+    "Name": "nowy testowy",
+    "Price": 88.9,
+    "Owner": "misia Gogo"
+  },
+  {
+    "Name": "ttttt",
+    "Price": 433,
+    "Owner": "ffff"
+  }
 ]
