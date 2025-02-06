@@ -32,6 +32,11 @@ namespace cw8.Controllers
             }            
             return View();
         }
+        public IActionResult DeleteGift(int id){
+            _myGiftsRepo.MyGifts.RemoveAt(id);            
+            _myGiftsRepo.Save();
+            return RedirectToAction("List");
+        }
 
     }
 }
