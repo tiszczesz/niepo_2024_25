@@ -18,8 +18,11 @@ fun c22(){
     val numbers = Array<Int>(3){ Random.nextInt(0,100)}
     println(numbers.joinToString())
     println("\n --------------------------------- ")
-    for (index in numbers){
-        print("$index ")
+//    for (index in numbers){
+//        print("$index ")
+//    }
+    for (index in 0..numbers.size-1){
+        print("${numbers[index]} ")
     }
     println("\n --------------------------------- ")
     fun getOddSum(data:Array<Int>):Int{
@@ -32,4 +35,17 @@ fun c22(){
         return sum
     }
     println("suma nieparzystych: ${getOddSum(numbers)}")
+}
+fun generTab():Array<Int>{
+    print("Podaj rozmiar tablicy: ")
+    val input = readLine()
+    val size = input?.toIntOrNull() ?: 0
+    val tab = Array<Int>(size){ Random.nextInt(0,100)}
+    return tab;
+}
+fun c23(){
+    val numbers = generTab()
+    //todo funkcje -> srednia i srednia parzystych lub nieparzystych true lub false
+    println("srednia tablicy ${numbers.joinToString()} ${numbers.average()}")
+
 }
