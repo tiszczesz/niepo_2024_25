@@ -9,7 +9,6 @@ form.onsubmit = function (event) {
     const table = createTable(rows, cols);
     document.querySelector('.result').innerHTML = table;
     console.log('submit', event);
-
 };
 document.querySelector("#reset").onclick = function (event) {
     //alert('reset');
