@@ -14,3 +14,5 @@ int main()
 //Napisz program ktory wczytuje wspolrzedne dwoch punktow i wypisuje odleglosc miedzy nimi
 //przeci¹¿ operatora << aby wypisywa³ punkt w postaci (x,y)
 //Point2D.h
+//konstruktor domyslny twozacy punkt w (0,0)
+//Poind2D(4,8.9)
