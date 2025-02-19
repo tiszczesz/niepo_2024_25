@@ -45,3 +45,6 @@ function isPrime(number) {
     }
     return true;
 };
+function dividedBy(number,divided){
+    return number % divided === 0;
+}
