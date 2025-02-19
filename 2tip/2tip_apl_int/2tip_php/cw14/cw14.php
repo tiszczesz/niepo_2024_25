@@ -11,12 +11,14 @@
     <?php
     require_once 'functions.php';
     newLine("Ala ma kota");
+    errorString("Ala ma kota");
+    errorString("Żółta łódź");
     newLine("Żółta łódź");
-    echo strlen("Ala") . "<br>";
-    echo strlen("łódź") . "<br>";
-    echo mb_strlen("łódź") . "<br>";
-    echo mb_strlen("łódź", "UTF-8") . "<br>";
-
+   // echo strlen("Ala") . "<br>";
+   // echo strlen("łódź") . "<br>";
+   // echo mb_strlen("łódź") . "<br>";
+   // echo mb_strlen("łódź", "UTF-8") . "<br>";
+   
     ?>
 </body>
 
