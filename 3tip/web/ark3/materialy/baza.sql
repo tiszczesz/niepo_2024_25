@@ -26,6 +26,33 @@ SET time_zone = "+00:00";
 -- Struktura tabeli dla tabeli `ogloszenie`
 --
 
+CREATE TABLE `kategoria` (
+  `id` int(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `nazwa` text
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `kategoria` ( `nazwa`) VALUES
+('Ksiazki'),
+( 'Muzyka'),
+( 'Filmy');
+
+CREATE TABLE `podkategoria` (
+  `id` int(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `nazwa` text,
+  `kategoria_id` int(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `podkategoria` ( `nazwa`, `kategoria_id`) VALUES
+('Biografia', 1),
+('Komiks', 1),
+('Kryminał', 1),
+('Rock', 2),
+('Pop', 2),
+('Metal', 2),
+('Komedia', 3),
+('Dramat', 3),
+('Akcja', 3);
+
 CREATE TABLE `ogloszenie` (
   `id` int(10) UNSIGNED NOT NULL,
   `uzytkownik_id` int(10) UNSIGNED NOT NULL,
@@ -40,11 +67,11 @@ CREATE TABLE `ogloszenie` (
 --
 
 INSERT INTO `ogloszenie` (`id`, `uzytkownik_id`, `kategoria`, `podkategoria`, `tytul`, `tresc`) VALUES
-(1, 1, 1, 12, 'Daniel Craig. Biografia', 'Biografia Daniela Craiga, niedrogo sprzedam'),
-(2, 1, 1, 13, 'Selekcja', 'Sprzedam: "Selekcja" J. Kellermana, niezniszczona'),
-(3, 2, 1, 13, 'Buick', 'Sprzedam horror Stephena Kinga w dobrym stanie'),
-(4, 2, 1, 14, 'Tytus, Romek i Atomek', 'Ks. IV do sprzedania, stan dobry'),
-(5, 2, 2, 0, 'Imagine Dragons', 'Sprzedam dwa CD Imagine Dragons');
+(1, 1, 1, 1, 'Daniel Craig. Biografia', 'Biografia Daniela Craiga, niedrogo sprzedam'),
+(2, 1, 1, 1, 'Selekcja', 'Sprzedam: "Selekcja" J. Kellermana, niezniszczona'),
+(3, 2, 1, 3, 'Buick', 'Sprzedam horror Stephena Kinga w dobrym stanie'),
+(4, 2, 1, 2, 'Tytus, Romek i Atomek', 'Ks. IV do sprzedania, stan dobry'),
+(5, 2, 2, 2, 'Imagine Dragons', 'Sprzedam dwa CD Imagine Dragons');
 
 -- --------------------------------------------------------
 
