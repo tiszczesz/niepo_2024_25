@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color:#301B5E ;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 60px;
+    padding: 20px;
+}
+main{
+    display: flex;
+}
+img{
+    padding: 20px;
+    border: dotted 1px orange;
+}
+#left{
+    background-color: #0193DA;
+    width: 60%;
+    height: 700px;
+}
+#right{
+    background-color: #2DAFEE;
+    width: 40%;
+    height: 700px;
+    text-align: center;
+}
+footer{
+    background-color: #301B5E;
+    color: white;
+    text-align: center;
+}
+a{
+    color: white;
+}
+s:hover{
+    color: red;
+}
