@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model User
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,6 +16,18 @@
     <main>
         <section id="left">
             <h3>Wpisz swoje dane</h3>
+            <form asp-action="List" method="post">
+                <label asp-for="FirstName"></label><br>
+                <input type="text" asp-for="FirstName" required><br>
+                <label asp-for="LastName"></label><br>
+                <input type="text" asp-for="LastName" required><br>
+                <label asp-for="Phone"></label><br>
+                <input type="tel" asp-for="Phone" required><br>
+                <label asp-for="Email"></label><br>
+                <input type="email" asp-for="Email" required><br>
+                <input type="reset" value="Czyść">
+                <input type="submit" value="Wyślij">
+            </form>
         </section>
         <section id="right">
             <div>
@@ -23,7 +36,19 @@
 
             <a href="~/kwerendy.txt">kwerendy SQL</a>
             <h3>Kategorie</h3>
+            <ul>
+                @foreach (var category in ViewBag.Categories)
+                {
+                    <li>@category.Name</li>
+                }   
+            </ul>
             <h3>Podkategorie</h3>
+            <ul>
+                @foreach (var subcategory in ViewBag.Subcategories)
+                {
+                    <li>@subcategory.Name</li>
+                }
+            </ul>
         </section>
     </main>
     <footer>
