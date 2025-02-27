@@ -1,0 +1,15 @@
+ If filename is of the form "scheme://...", it is assumed to be a 
+ URL and PHP will search for a protocol handler (also known as a wrapper) for that scheme. If no wrappers for that protocol are registered, PHP will emit 
+ a notice to help you track potential problems in your script 
+ and then continue as though filename specifies a regular file.
+
+If PHP has decided that filename specifies a local file, then 
+it will try to open a stream on that file. The file must be accessible to PHP, 
+so you need to ensure that the file access permissions allow this access. If you have enabled open_basedir further restrictions may apply.
+
+If PHP has decided that filename specifies a registered protocol, and that 
+protocol is registered as a network URL, PHP will check to make sure that 
+allow_url_fopen is enabled. If it is switched off, PHP will emit a warning 
+and the fopen() call will fail. 
+dsf dsf sdfdsf dsfdsf
+sdfdsf sdf dsfdsf
