@@ -1,8 +1,10 @@
+import java.io.File
 import kotlin.random.Random
 
 fun main() {
    // c41()
-    c42()
+   // c42()
+    c43()
 }
 
 fun c41() {
@@ -32,4 +34,16 @@ fun c42(){
     println(list)
     list.removeAt(2)
     println(list)
+}
+fun c43(){
+    val names = mutableListOf<String>("Ala", "Ola", "Ela")
+    println(names)
+    names.add("Ula")
+    names.add(1, "Iza")
+    //zapis do pliku dane.txt listy names
+    File("dane.txt").writeText(names.joinToString("\n"))
+    //odczyt z pliku dane.txt do listy names2
+    val names2 = File("dane.txt").readLines().toMutableList()
+    println(" odzytane z pliku dane.txt: ")
+    println(names2)
 }

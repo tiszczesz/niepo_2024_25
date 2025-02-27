@@ -1,0 +1,81 @@
+/* Domyślne formatowanie */
+* {
+  font-family: 'Bookman Old Style', serif;
+}
+
+/* Formatowanie banerów */
+header {
+  background-color: DarkCyan;
+  color: white;
+  display: flex;
+  height: 100px;
+}
+header > section {
+  width: 50%;
+}
+header:nth-child(2) {
+  letter-spacing: 15px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+}
+main {
+  display: flex;
+}
+
+/* Formatowanie stopki */
+footer {
+  background-color: DarkCyan;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Formatowanie kart pracowniczych */
+.karta {
+  background-color: Azure;
+  width: 30%;
+  margin: 1%;
+  box-shadow: 4px 4px 8px DimGray;
+ 
+}
+.karta img {
+  width: 100%;
+}
+
+/* Formatowanie obrazów w kartach */
+
+
+/* Formatowanie nagłówków i paragrafów */
+h2,
+h3,
+p {
+  margin: 15px;
+}
+
+/* Formatowanie odnośników */
+a {
+  color: white;
+}
+
+/* Formatowanie nagłówka piątego stopnia */
+h5 {
+  background-color: Teal;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  margin: 0;
+}
+
+/* Efekt hover dla h5 */
+h5:hover {
+  background-color: LightSeaGreen;
+}
+
+/* Formatowanie bloku cytatów */
+.cytaty {
+  text-align: center;
+  font-style: italic;
+  padding: 30px 0;
+}
+
