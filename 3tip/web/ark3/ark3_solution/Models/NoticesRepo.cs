@@ -69,6 +69,31 @@ public class NoticesRepo
     public void ShowSaveG(){
         SaveG();
     }
+
+    public List<NoticeFull> GetNoticesFull(){
+        var notices = new List<NoticeFull>();
+        using MySqlConnection conn = new MySqlConnection(connectionString);
+        using MySqlCommand cmd = conn.CreateCommand();
+        cmd.CommandText = @"SELECT ogloszenie.tresc, uzytkownik.imie,uzytkownik.nazwisko ,kategoria.nazwa,podkategoria.nazwa
+                            from ogloszenie INNER JOIN uzytkownik 
+                            on ogloszenie.uzytkownik_id=uzytkownik.id
+                            INNER join kategoria on ogloszenie.kategoria=kategoria.id
+                            INNER join podkategoria on ogloszenie.podkategoria=podkategoria.id";
+        conn.Open();
+        using var reader = cmd.ExecuteReader();
+        while (reader.Read())
+        {
+            NoticeFull notice = new NoticeFull();
+            notice.Content = reader.GetString(0);
+            notice.FirstName = reader.GetString(1);
+            notice.LastName = reader.GetString(2);
+            notice.CategoryName = reader.GetString(3);
+            notice.SubCategoryName = reader.GetString(4);
+            notices.Add(notice);
+        }
+        conn.Close();
+        return notices;
+    }
 }
 
 

@@ -1,50 +1,80 @@
-body{
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
 }
-header{
-    background-color:#301B5E ;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    height: 60px;
-    padding: 20px;
+header {
+  background-color: #301b5e;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 60px;
+  padding: 20px;
 }
-main{
-    display: flex;
+main {
+  display: flex;
 }
-img{
-    padding: 20px;
-    border: dotted 1px orange;
+img {
+  padding: 20px;
+  border: dotted 1px orange;
 }
-#left{
-    background-color: #0193DA;
-    width: 60%;
-    height: 700px;
+#left {
+  background-color: #0193da;
+  width: 60%;
+  height: 700px;
 }
-#right{
-    background-color: #2DAFEE;
-    width: 40%;
-    height: 700px;
-    text-align: center;
+#right {
+  background-color: #2dafee;
+  width: 40%;
+  height: 700px;
+  text-align: center;
 }
-footer{
-    background-color: #301B5E;
-    color: white;
-    text-align: center;
+footer {
+  background-color: #301b5e;
+  color: white;
+  text-align: center;
 }
-a{
-    color: white;
+a {
+  color: white;
 }
-s:hover{
-    color: red;
+s:hover {
+  color: red;
 }
-ul{
-    list-style-position: inside;
+ul {
+  list-style-position: inside;
 }
-input[type="submit"], input[type="reset"]{
-    background-color: orange;
-    color: white;
-    padding: 20px;
-    border: none;
-    cursor: pointer;
+input[type='submit'],
+input[type='reset'] {
+  background-color: orange;
+  color: white;
+  padding: 20px;
+  border: none;
+  cursor: pointer;
+}
+table {
+  margin: 10px;
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: #8cbbd3;
+}
+th {
+  background-color: #656168;
+  color: white;
+}
+.btn {
+  display: inline-block;
+  background-color: #575261;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  width: 300px;
+  text-align: center;
+}
+.btn:hover {
+  background-color: #656168;
 }

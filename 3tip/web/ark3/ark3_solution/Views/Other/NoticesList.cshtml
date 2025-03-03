@@ -1,4 +1,4 @@
-﻿
+﻿@model List<NoticeFull>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,10 +13,36 @@
 <body>
     <header>
         <h2>Lista ogłoszeń</h2>
+       
     </header>
     <main>
         <section id="left">
-            
+            <div style="margin: 20px;">
+                <a class="btn" asp-action="AddNotice">Dodaj ogłoszenie</a>
+            </div>
+             <table>
+            <thead>
+                <tr>
+                    <th>Tytuł</th>
+                    <th>Imię</th>
+                    <th>Nazwisko</th>
+                    <th>Kategoria</th>
+                    <th>Podkategoria</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var notice in Model)
+                {
+                    <tr>
+                        <td>@notice.Content</td>
+                        <td>@notice.FirstName</td>
+                        <td>@notice.LastName</td>
+                        <td>@notice.CategoryName</td>
+                        <td>@notice.SubCategoryName</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
         </section>
         <section id="right">
             <div>
