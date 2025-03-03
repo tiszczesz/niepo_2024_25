@@ -35,6 +35,9 @@
             </div>
 
             <a href="~/kwerendy.txt">kwerendy SQL</a>
+            <div>
+                <a asp-action="NoticesList" asp-controller="Other">Ogłoszenia</a>
+            </div>
             <h3>Kategorie</h3>
             <ul>
                 @foreach (var category in ViewBag.Categories)
@@ -53,6 +56,7 @@
     </main>
     <footer>
         Portal ogłoszeniowy opracował: 00000000000
+
     </footer>
 </body>
 
