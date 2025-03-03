@@ -62,4 +62,15 @@ public class NoticesRepo
         cmd.ExecuteNonQuery();
         conn.Close();
     }
+    private void SaveG(){
+        //TODO
+        Console.WriteLine("SaveG");
+    }
+    public void ShowSaveG(){
+        SaveG();
+    }
 }
+
+
+
+
