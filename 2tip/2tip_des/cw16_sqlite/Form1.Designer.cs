@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            dataGridView1 = new DataGridView();
             btnLoad = new Button();
+            dataGridView1 = new DataGridView();
+            btnAddNew = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -38,21 +39,13 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(255, 255, 192);
+            panel1.Controls.Add(btnAddNew);
             panel1.Controls.Add(btnLoad);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(200, 450);
             panel1.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(200, 0);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(600, 450);
-            dataGridView1.TabIndex = 1;
             // 
             // btnLoad
             // 
@@ -63,6 +56,27 @@
             btnLoad.Text = "Wczytaj produkty";
             btnLoad.UseVisualStyleBackColor = true;
             btnLoad.Click += btnLoad_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Location = new Point(200, 0);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Size = new Size(600, 450);
+            dataGridView1.TabIndex = 1;
+            // 
+            // btnAddNew
+            // 
+            btnAddNew.Location = new Point(12, 77);
+            btnAddNew.Name = "btnAddNew";
+            btnAddNew.Size = new Size(167, 46);
+            btnAddNew.TabIndex = 1;
+            btnAddNew.Text = "Dodaj produkt";
+            btnAddNew.UseVisualStyleBackColor = true;
+            btnAddNew.Click += btnAddNew_Click;
             // 
             // Form1
             // 
@@ -83,5 +97,6 @@
         private Panel panel1;
         private DataGridView dataGridView1;
         private Button btnLoad;
+        private Button btnAddNew;
     }
 }
