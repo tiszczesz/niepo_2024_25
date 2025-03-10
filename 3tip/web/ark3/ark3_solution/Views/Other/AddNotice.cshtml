@@ -1,0 +1,95 @@
+﻿@model ark3_solution.Models.NoticeFull
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/styl4.css">
+    <title>Dodaj Użytkownika</title>
+</head>
+
+<body>
+
+    <header>
+        <h2>Dodaj ogłoszenie</h2>
+
+    </header>
+    <main>
+        <section id="left">
+            <div style="margin: 20px;">
+                <a class="btn" asp-action="NoticeList">Lista ogłoszeń</a>
+            </div>
+            <form asp-action="AddNotice" method="post">
+                <div class="line">
+                    <label asp-for="Title"></label>
+                    <input type="text" asp-for="Title">
+                    <span asp-validation-for="Title" class="error"></span>
+                </div>
+                <div class="line">
+                    <label asp-for="Content"></label>
+                    <textarea asp-for="Content"></textarea>
+                    <span asp-validation-for="Content" class="error"></span>
+                </div>
+                <div class="line">
+                    <label>Wybierz użytkownika</label>
+                    <select asp-for="UserId">
+                        @foreach (var user in ViewBag.Users)
+                        {
+                            <option value="@user.Id">@user.FirstName @user.LastName</option>
+                        }
+                    </select>
+                </div>
+                @* <div class="line">
+                    <label asp-for="FirstName"></label>
+                    <input type="text" asp-for="FirstName">
+                    <span asp-validation-for="FirstName" class="error"></span>
+                </div>
+                <div class="line">
+                    <label asp-for="LastName"></label>
+                    <input type="text" asp-for="LastName">
+                    <span asp-validation-for="LastName" class="error"></span>
+
+                </div> *@
+                <div class="line">
+                    <label asp-for="CategoryName"></label>
+                    <select asp-for="CategoryId">
+                        @foreach (var category in ViewBag.Categories)
+                        {
+                            <option value="@category.Id">@category.Name</option>
+                        }
+                    </select>
+                </div>
+                <div class="line">
+                    <label asp-for="SubCategoryName"></label>
+                    <select asp-for="SubCategoryId">
+                        @foreach (var subcategory in ViewBag.Subcategories)
+                        {
+                            <option value="@subcategory.Id">@subcategory.Name</option>
+                        }
+                    </select>
+                </div>
+                <div class="line" style="margin-left: 100px;">
+                    <input type="reset" value="Czyść" style="width: 120px;">
+                    <input type="submit" value="Wyślij" style="width: 120px;">
+
+                </div>
+
+            </form>
+        </section>
+        <section id="right">
+
+        </section>
+    </main>
+
+    <footer>
+        Portal ogłoszeniowy opracował: 00000000000
+    </footer>
+</body>
+
+</html>

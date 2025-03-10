@@ -78,3 +78,15 @@ th {
 .btn:hover {
   background-color: #656168;
 }
+.line { 
+  margin: 10px;
+}
+.line label {
+  display: inline-block;
+  width: 200px;
+  text-align: right;
+  margin: 10px;
+}
+.error {
+  color: red;
+}

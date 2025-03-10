@@ -9,8 +9,9 @@
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
+DROP DATABASE IF EXISTS `3ti_2024_25_ksiazki`;
+CREATE DATABASE `3ti_2024_25_ksiazki` DEFAULT CHARACTER SET utf8 COLLATE utf8_polish_ci;
+use `3ti_2024_25_ksiazki`;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -29,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `kategoria` (
   `id` int(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `nazwa` text
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `kategoria` ( `nazwa`) VALUES
 ('Ksiazki'),
@@ -40,7 +41,7 @@ CREATE TABLE `podkategoria` (
   `id` int(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `nazwa` text,
   `kategoria_id` int(10) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `podkategoria` ( `nazwa`, `kategoria_id`) VALUES
 ('Biografia', 1),
@@ -60,7 +61,7 @@ CREATE TABLE `ogloszenie` (
   `podkategoria` int(10) UNSIGNED DEFAULT NULL,
   `tytul` text,
   `tresc` text
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Zrzut danych tabeli `ogloszenie`
@@ -85,7 +86,7 @@ CREATE TABLE `uzytkownik` (
   `nazwisko` text,
   `telefon` text,
   `email` text
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Zrzut danych tabeli `uzytkownik`

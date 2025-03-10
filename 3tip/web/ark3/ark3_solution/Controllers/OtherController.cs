@@ -17,6 +17,27 @@ namespace ark3_solution.Controllers
             List<NoticeFull> notices = _noticesRepo.GetNoticesFull();
             return View(notices);
         }
+        [HttpGet]
+        public ActionResult AddNotice()
+        {
+            ViewBag.Categories = _noticesRepo.GetCategories();
+            ViewBag.SubCategories = _noticesRepo.GetSubCategories();
+            ViewBag.Users = _noticesRepo.GetUsers();
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddNotice(NoticeFull notice)
+        {
+            ViewBag.Categories = _noticesRepo.GetCategories();
+            ViewBag.SubCategories = _noticesRepo.GetSubCategories();
+            ViewBag.Users = _noticesRepo.GetUsers();
+            if (!ModelState.IsValid)
+            {
+                return View(notice);
+            }
+            _noticesRepo.SaveNotice(notice);
+            return RedirectToAction("NoticesList");
+        }
 
     }
 }

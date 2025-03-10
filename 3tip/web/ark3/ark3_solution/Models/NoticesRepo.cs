@@ -94,6 +94,42 @@ public class NoticesRepo
         conn.Close();
         return notices;
     }
+
+    public void SaveNotice(NoticeFull notice)
+    {
+        using MySqlConnection conn = new MySqlConnection(connectionString);
+        MySqlCommand cmd = conn.CreateCommand();
+        cmd.CommandText = "INSERT INTO ogloszenie (tytul,tresc, uzytkownik_id, kategoria, podkategoria) VALUES (@tytul,@tresc, @uzytkownik_id, @kategoria, @podkategoria)";
+        cmd.Parameters.AddWithValue("@tytul", notice.Title);
+        cmd.Parameters.AddWithValue("@tresc", notice.Content);
+        cmd.Parameters.AddWithValue("@uzytkownik_id", notice.UserId);
+        cmd.Parameters.AddWithValue("@kategoria", notice.CategoryId);
+        cmd.Parameters.AddWithValue("@podkategoria", notice.SubCategoryId);
+        conn.Open();
+        cmd.ExecuteNonQuery();
+        conn.Close();
+    }
+    public List<User> GetUsers()
+    {
+        List<User> users = new List<User>();
+        using MySqlConnection conn = new MySqlConnection(connectionString);
+        conn.Open();
+        MySqlCommand cmd = conn.CreateCommand();
+        cmd.CommandText = "SELECT * FROM uzytkownik";
+        using var reader = cmd.ExecuteReader();
+        while (reader.Read())
+        {
+            User user = new User();
+            user.Id = reader.GetInt32(0);
+            user.FirstName = reader.GetString(1);
+            user.LastName = reader.GetString(2);
+            user.Phone = reader.GetString(3);
+            user.Email = reader.GetString(4);
+            users.Add(user);
+        }
+        conn.Close();
+        return users;
+    }
 }
 
 
