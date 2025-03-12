@@ -25,6 +25,7 @@ namespace cw16_sqlite {
 
         private void btnAddNew_Click(object sender, EventArgs e) {
             new AddProductform(this).ShowDialog();
+            
         }
 
         public ProductsRepo GetRepo() {
