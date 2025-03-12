@@ -1,6 +1,6 @@
 ﻿#pragma once
 #include <string>
-enum class Role2;
+//enum class Role2;
 enum Role;//deklaracja stara wersja
 class User
 {
@@ -8,7 +8,7 @@ private:
 	std::string login;
 	std::string password;
 	Role role;
-	Role2 role2;
+	//Role2 role2;
 public:
 	User() {
 		login = "noname";
@@ -29,9 +29,9 @@ public:
 	Role GetRole() const {
 		return this->role;
 	}
-	Role2 GetRole2() const {
-		return this->role2;
-	}
+//	Role2 GetRole2() const {
+//		return this->role2;
+//	}
 	std::string GetRoleName() const {
 		switch (this->role) {
 		case 1:
@@ -46,7 +46,7 @@ public:
 			return "UNKNOWN";
 		}
 	}
-	std::string GetRoleName2() const {
+/*	std::string GetRoleName2() const {
 		switch (this->role2) {
 		case Role2::ADMIN:
 			return "ADMIN";
@@ -59,6 +59,8 @@ public:
 		default:
 			return "UNKNOWN";
 		}
+		}
+		*/
 
 };
 
@@ -68,11 +70,9 @@ enum Role { //definicja
 	EDITOR,
 	VIEWER = 5
 };
-enum class Role2 { //definicja
-	ADMIN = 1,
-	USER,
-	EDITOR,
-	VIEWER = 5
-};
+/**
+ * 
+ */
+
 
 
