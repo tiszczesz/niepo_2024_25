@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +33,26 @@ namespace cw16_sqlite.Models
             }
             conn.Close();
             return products;
+        }
+        public void AddProduct(Product product)
+        {
+            using var conn = new SqliteConnection(connString);
+            using var command = conn.CreateCommand();
+            //tutaj problem z przecinkiem w double!!!! CultuerInfo.InvariantCulture
+            //command.CommandText = "INSERT INTO products(name, description, price)"
+            //                      + $" VALUES ('{product.Name}','{product.Description}',{product.Price.ToString(CultureInfo.InvariantCulture)})";
+
+
+            //Parametryzacja zapytania SQL - zabezpieczenie przed SQL Injection
+            //nie trzeba ręcznie zamieniać przecinka na kropkę
+            command.CommandText =
+                "INSERT INTO products (name, description, price) VALUES ($name, $description, $price)";
+            command.Parameters.AddWithValue("$name", product.Name);
+            command.Parameters.AddWithValue("$description", product.Description);
+            command.Parameters.AddWithValue("$price", product.Price);
+            conn.Open();
+            command.ExecuteNonQuery();
+            conn.Close();
         }
     }
 }

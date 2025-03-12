@@ -1,6 +1,6 @@
 ﻿namespace cw16_sqlite
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            btnAddNew = new Button();
             btnLoad = new Button();
             dataGridView1 = new DataGridView();
-            btnAddNew = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -46,6 +46,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(200, 450);
             panel1.TabIndex = 0;
+            // 
+            // btnAddNew
+            // 
+            btnAddNew.Location = new Point(12, 77);
+            btnAddNew.Name = "btnAddNew";
+            btnAddNew.Size = new Size(167, 46);
+            btnAddNew.TabIndex = 1;
+            btnAddNew.Text = "Dodaj produkt";
+            btnAddNew.UseVisualStyleBackColor = true;
+            btnAddNew.Click += btnAddNew_Click;
             // 
             // btnLoad
             // 
@@ -68,25 +78,15 @@
             dataGridView1.Size = new Size(600, 450);
             dataGridView1.TabIndex = 1;
             // 
-            // btnAddNew
-            // 
-            btnAddNew.Location = new Point(12, 77);
-            btnAddNew.Name = "btnAddNew";
-            btnAddNew.Size = new Size(167, 46);
-            btnAddNew.TabIndex = 1;
-            btnAddNew.Text = "Dodaj produkt";
-            btnAddNew.UseVisualStyleBackColor = true;
-            btnAddNew.Click += btnAddNew_Click;
-            // 
-            // Form1
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "MainForm";
+            Text = "Okno główne";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

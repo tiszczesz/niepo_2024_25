@@ -1,10 +1,10 @@
 ﻿using cw16_sqlite.Models;
 
 namespace cw16_sqlite {
-    public partial class Form1 : Form {
+    public partial class MainForm : Form {
         private ProductsRepo _repo;
 
-        public Form1() {
+        public MainForm() {
             InitializeComponent();
             _repo = new ProductsRepo();
             // var products = _repo.GetProducts();
@@ -14,7 +14,7 @@ namespace cw16_sqlite {
             ShowInDataGridView();
         }
 
-        private void ShowInDataGridView() {
+        public void ShowInDataGridView() {
             dataGridView1.DataSource = null;
 
             dataGridView1.DataSource = _repo.GetProducts();

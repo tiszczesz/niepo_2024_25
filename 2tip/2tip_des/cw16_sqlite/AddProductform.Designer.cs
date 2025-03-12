@@ -32,7 +32,7 @@
             label2 = new Label();
             label3 = new Label();
             tbName = new TextBox();
-            tnbDescription = new TextBox();
+            tbDescription = new TextBox();
             nudPrice = new NumericUpDown();
             btnSave = new Button();
             btnCancel = new Button();
@@ -75,11 +75,11 @@
             // 
             // tnbDescription
             // 
-            tnbDescription.Location = new Point(115, 91);
-            tnbDescription.Multiline = true;
-            tnbDescription.Name = "tnbDescription";
-            tnbDescription.Size = new Size(173, 77);
-            tnbDescription.TabIndex = 4;
+            tbDescription.Location = new Point(115, 91);
+            tbDescription.Multiline = true;
+            tbDescription.Name = "tbDescription";
+            tbDescription.Size = new Size(173, 77);
+            tbDescription.TabIndex = 4;
             // 
             // nudPrice
             // 
@@ -98,6 +98,7 @@
             btnSave.TabIndex = 6;
             btnSave.Text = "Zapisz";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // btnCancel
             // 
@@ -117,7 +118,7 @@
             Controls.Add(btnCancel);
             Controls.Add(btnSave);
             Controls.Add(nudPrice);
-            Controls.Add(tnbDescription);
+            Controls.Add(tbDescription);
             Controls.Add(tbName);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -137,7 +138,7 @@
         private Label label2;
         private Label label3;
         private TextBox tbName;
-        private TextBox tnbDescription;
+        private TextBox tbDescription;
         private NumericUpDown nudPrice;
         private Button btnSave;
         private Button btnCancel;
