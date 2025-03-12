@@ -28,6 +28,12 @@ namespace cw16_sqlite
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if(String.IsNullOrEmpty(tbName.Text)
+               || String.IsNullOrEmpty(tbDescription.Text) 
+               || nudPrice.Value<=0)
+            {
+                return;
+            }
             var product = new Product
             {
                 Name = tbName.Text,
