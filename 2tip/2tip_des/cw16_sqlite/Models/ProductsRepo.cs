@@ -54,5 +54,16 @@ namespace cw16_sqlite.Models
             command.ExecuteNonQuery();
             conn.Close();
         }
+
+        public  void DeleteProduct(Product product)
+        {
+            using SqliteConnection conn = new SqliteConnection(connString);
+            using SqliteCommand command = conn.CreateCommand();
+            command.CommandText = "DELETE FROM products WHERE id = $id";
+            command.Parameters.AddWithValue("$id", product.Id);
+            conn.Open();
+            command.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            btnDelete = new Button();
             btnAddNew = new Button();
             btnLoad = new Button();
             dataGridView1 = new DataGridView();
@@ -39,6 +40,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(255, 255, 192);
+            panel1.Controls.Add(btnDelete);
             panel1.Controls.Add(btnAddNew);
             panel1.Controls.Add(btnLoad);
             panel1.Dock = DockStyle.Left;
@@ -46,6 +48,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(200, 450);
             panel1.TabIndex = 0;
+            // 
+            // btnDelete
+            // 
+            btnDelete.Location = new Point(12, 141);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(167, 46);
+            btnDelete.TabIndex = 2;
+            btnDelete.Text = "Usuń produkt";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnAddNew
             // 
@@ -72,6 +84,7 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(200, 0);
+            dataGridView1.MultiSelect = false;
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -98,5 +111,6 @@
         private DataGridView dataGridView1;
         private Button btnLoad;
         private Button btnAddNew;
+        private Button btnDelete;
     }
 }

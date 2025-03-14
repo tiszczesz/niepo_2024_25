@@ -1,5 +1,13 @@
-#menu{
-    border: 1px black solid;
-    width: 200px;
-    height: 100px;
+#menu {
+  border: 1px black solid;
+  width: 200px;
+  height: 100px;
+}
+#sprite {
+  height: 20px;
+  width: 20px;
+  background-color: aqua;
+  border-radius: 50%;
+  position: relative;
+  /* visibility: hidden; */
 }

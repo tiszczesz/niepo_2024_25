@@ -16,3 +16,16 @@ elemMenu.onmouseenter = function (e) {
 elemMenu.onmouseleave = function (e) {
     elemMenu.innerHTML = "opuszczono menu";
 }
+setPositoin(document.querySelector('#sprite'));
+function setPositoin(elem) {
+    const sceneWidth = document.querySelector('#scene').style.width;
+    const sceneHeight = document.querySelector('#scene').style.height;
+    const xRandom = Math.floor(Math.random() * (parseInt(sceneWidth) - 100));
+    const yRandom = Math.floor(Math.random() * (parseInt(sceneHeight)-20));
+    elem.style.left = xRandom + 'px';
+    elem.style.top = yRandom + 'px';
+    console.log(sceneWidth, sceneHeight);
+    console.log(xRandom, yRandom);
+
+}
+//console.log(sceneWidth, sceneHeight);

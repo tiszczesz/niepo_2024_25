@@ -1,20 +1,24 @@
 ﻿using cw16_sqlite.Models;
 
 namespace cw16_sqlite {
-    public partial class MainForm : Form {
+    public partial class MainForm : Form
+    {
         private ProductsRepo _repo;
 
-        public MainForm() {
+        public MainForm()
+        {
             InitializeComponent();
             _repo = new ProductsRepo();
             // var products = _repo.GetProducts();
         }
 
-        private void btnLoad_Click(object sender, EventArgs e) {
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
             ShowInDataGridView();
         }
 
-        public void ShowInDataGridView() {
+        public void ShowInDataGridView()
+        {
             dataGridView1.DataSource = null;
 
             dataGridView1.DataSource = _repo.GetProducts();
@@ -23,13 +27,25 @@ namespace cw16_sqlite {
                 .AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
-        private void btnAddNew_Click(object sender, EventArgs e) {
+        private void btnAddNew_Click(object sender, EventArgs e)
+        {
             new AddProductform(this).ShowDialog();
-            
+
         }
 
-        public ProductsRepo GetRepo() {
+        public ProductsRepo GetRepo()
+        {
             return _repo;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0) {
+                var product = (Product)dataGridView1.SelectedRows[0].DataBoundItem;
+                if(product == null) return;
+                _repo.DeleteProduct(product);
+                ShowInDataGridView();
+            }
         }
     }
 }
