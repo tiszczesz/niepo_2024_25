@@ -15,9 +15,12 @@ namespace cw9_mysql.Controllers
             return View();
         }
         public IActionResult List(){
-            var users = _usersRepo.GetUsers();
+            var users = _usersRepo.GetUsersWithRoles();
             return View(users);
         }
+        // public IActionResult UserInfi(int id){
+        //     var user = _usersRepo.GetUsersWithRoles(id);
+        //     return View(user);
 
     }
 }

@@ -8,17 +8,24 @@
         <th>Nazwisko</th>
         <th>wiek</th>
         <th>Rola</th>
+
     </thead>
     <tbody>
-        @{int lp  =0;}
+        @{
+            int lp = 0;
+        }
         @foreach (var user in Model)
         {
             <tr>
                 <td>@(++lp)</td>
                 <td>@user.Firstname</td>
-                <td>@user.Lastname</td>
+                <td>
+                    <a asp-action="UserInfo" asp-route-id="@user.Id">
+                        @user.Lastname
+                    </a>
+                </td>
                 <td>@user.Age</td>
-                <td>@user.RoleId</td>
+        <td>@user.RoleName</td>
             </tr>
         }
     </tbody>

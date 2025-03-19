@@ -39,7 +39,7 @@ public class UsersRepo
         using var connection = new MySqlConnection(_connectionString);
         using var command = connection.CreateCommand();
         command.CommandText =
-        "SELECT u.id,u.firstname,u.lastname,u.age, r.name " +
+        "SELECT u.id,u.firstname,u.lastname,u.age, r.name as name " +
         " FROM users as u INNER JOIN roles as r ON u.role_id = r.id";
         connection.Open();
         using var reader = command.ExecuteReader();
@@ -52,7 +52,8 @@ public class UsersRepo
                     Firstname = reader.GetString("firstname"),
                     Lastname = reader.GetString("lastname"),
                     Age = reader.GetInt32("age"),
-                    RoleId = reader.GetInt32("role_id")
+                    //RoleId = reader.GetInt32("role_id"),
+                    RoleName = reader.GetString("name")
                 });
         }
         connection.Close();
