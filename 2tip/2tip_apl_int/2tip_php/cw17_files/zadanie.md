@@ -7,3 +7,5 @@ Formularz zapisem na konferencję naukową form.html result.php
 - strona list.php wyswitli wszystkich zapisanych na konferencje do tabelki html
 
 można użyć bootstrapa css
+
+Strona z licznikiem odwiedzin do pliku po usunieciu pliku zaczyna sie licznik od 1
