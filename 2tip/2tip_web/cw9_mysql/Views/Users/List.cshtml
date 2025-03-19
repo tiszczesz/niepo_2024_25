@@ -20,12 +20,13 @@
                 <td>@(++lp)</td>
                 <td>@user.Firstname</td>
                 <td>
-                    <a asp-action="UserInfo" asp-route-id="@user.Id">
+                    <a asp-action="UserInfo" 
+                    asp-route-id="@user.Id">
                         @user.Lastname
                     </a>
                 </td>
                 <td>@user.Age</td>
-        <td>@user.RoleName</td>
+                <td>@user.RoleName</td>
             </tr>
         }
     </tbody>
