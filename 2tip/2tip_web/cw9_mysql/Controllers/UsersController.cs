@@ -24,6 +24,7 @@ namespace cw9_mysql.Controllers
                 return RedirectToAction("List");
             }
             return View(user);
-
+        }
+        
     }
 }
