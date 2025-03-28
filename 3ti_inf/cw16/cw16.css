@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.scene {
+  width: 80%;
+}
+.info {
+  width: 20%;
+  padding: 10px;
+}
+button {
+  padding: 5px;
+  margin: 10px;
+  width: 60%;
+}
+.table {
+  border-collapse: collapse;
+}
+.table th,
+.table td {
+  border: 1px solid black;
+  width: 22px;
+  height: 22px;
+}
+body {
+  min-width: 1000px;
+}
