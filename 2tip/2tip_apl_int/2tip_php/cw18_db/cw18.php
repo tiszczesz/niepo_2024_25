@@ -25,17 +25,20 @@
     // $conn->set_charset('utf8');
     // $conn->query('SET NAMES utf8');
     var_dump($conn);
-    echo "</pre>";
+
     //zapytanie do bazy danych
     $sql = "SELECT * FROM users";
     //wykonanie zapytania
     $result = $conn->query($sql);
     var_dump($result);
-    $row = $result->fetch_row();
-    var_dump($row);
-    $row = $result->fetch_row();
-    var_dump($row);
+    while ($row = $result->fetch_assoc()) {
+        echo "<div>id: " . $row['id'] . " - imię: " . $row['firstname'] . " - nazwisko: "
+            . $row['lastname'] . "</div>\n";
+    }
+
+    //wyświetlenie wyników zapytania w select imie i nazwisko
     $conn->close();
+    echo "</pre>";
     ?>
 </body>
 
