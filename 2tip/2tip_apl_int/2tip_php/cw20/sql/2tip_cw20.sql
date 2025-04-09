@@ -37,7 +37,7 @@ CREATE TABLE `samochody` (
   `rocznik` year(4) DEFAULT NULL,
   `kolor` text DEFAULT NULL,
   `stan` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Dumping data for table `samochody`
@@ -66,7 +66,7 @@ CREATE TABLE `zamowienia` (
   `Klient` text DEFAULT NULL,
   `telefon` text DEFAULT NULL,
   `dataZam` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Dumping data for table `zamowienia`
