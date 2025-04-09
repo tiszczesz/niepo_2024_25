@@ -20,8 +20,7 @@ button {
 .table th,
 .table td {
   border: 1px solid black;
-  width: 22px;
-  height: 22px;
+  padding: 0;
 }
 body {
   min-width: 1000px;
