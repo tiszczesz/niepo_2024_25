@@ -1,2 +1,26 @@
-﻿
+﻿@model List<Car>
 <h1>Lista samochodów do wypożyczenia</h1>
+<table>
+    <tr>
+        <th>Lp</th>
+        <th>Marka</th>
+        <th>Model</th>
+        <th>Rocznik</th>
+        <th>Kolor</th>
+        <th>Stan</th>
+        <th>----</th>
+    </tr>
+    @{int lp =0;}
+    @foreach(var car in Model){
+        lp++;
+        <tr>
+            <td>@lp</td>
+            <td>@car.Brand</td>
+            <td>@car.Model</td>
+            <td>@car.Year</td>
+            <td>@car.Color</td>
+            <td>@car.Condition</td>
+            <td></td>
+        </tr>
+    }
+</table>
