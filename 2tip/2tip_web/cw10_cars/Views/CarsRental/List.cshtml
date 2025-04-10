@@ -20,7 +20,11 @@
             <td>@car.Year</td>
             <td>@car.Color</td>
             <td>@car.Condition</td>
-            <td></td>
+            <td>
+                <a asp-action="CarRent" asp-route-id="@car.Id">
+                    wypożycz samochód
+                </a>
+            </td>
         </tr>
     }
 </table>

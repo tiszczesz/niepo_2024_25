@@ -20,6 +20,19 @@ namespace cw10_cars.Controllers
             var cars = _carsRepo.GetAllCars();
             return View(cars);
         }
+        public IActionResult CarRent(int? id){
+            if(id==null){
+                //powrot do listy gdy id==null
+               // return RedirectToAction("List");
+                return RedirectToAction(nameof(List));
+            }
+            var car = _carsRepo.GetCarById(id.Value);
+            if(car==null){
+                //powrot do listy gdy id nie istnieje
+                return RedirectToAction(nameof(List));
+            }
+            return View(car);
+        }
 
     }
 }

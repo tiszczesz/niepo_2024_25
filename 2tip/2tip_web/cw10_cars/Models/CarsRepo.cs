@@ -10,7 +10,8 @@ public class CarsRepo
     {
         _connectionString = configuration.GetConnectionString("mysql");
     }
-    public List<Car> GetAllCars(){
+    public List<Car> GetAllCars()
+    {
         List<Car> cars = new();
         using MySqlConnection conn = new(_connectionString);
         using MySqlCommand cmd = conn.CreateCommand();
@@ -31,5 +32,27 @@ public class CarsRepo
             cars.Add(car);
         }
         return cars;
+    }
+    public Car? GetCarById(int id)
+    {
+        using MySqlConnection conn = new(_connectionString);
+        using MySqlCommand cmd = conn.CreateCommand();
+        cmd.CommandText = "SELECT * FROM samochody WHERE id=@id";
+        cmd.Parameters.AddWithValue("@id", id);
+        conn.Open();
+        using MySqlDataReader reader = cmd.ExecuteReader();
+        if (!reader.HasRows) return null;
+        reader.Read();
+        Car car = new()
+        {
+            Id = reader.GetInt32("id"),
+            Brand = reader.GetString("marka"),
+            Model = reader.GetString("model"),
+            Year = reader.GetInt32("rocznik"),
+            Color = reader.GetString("kolor"),
+            Condition = reader.GetString("stan")
+        };
+        conn.Close();
+        return car;
     }
 }
