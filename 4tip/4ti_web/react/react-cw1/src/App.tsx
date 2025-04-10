@@ -1,5 +1,6 @@
 import './App.css'
 import obrazek from './assets/react.svg'
+import Colors from './components/Colors'
 import First from './components/First'
 import Welcome from './components/Welcome'
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <hr />
     <First />
     <Welcome />
+    <Colors />
     </> 
   )
 }
