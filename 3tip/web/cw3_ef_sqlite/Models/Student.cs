@@ -8,5 +8,5 @@ public class Student
     public string Firstname { get; set; }
     public string Lastname { get; set; }
     public string IndexNumber { get; set; }
-    public string Birthdate { get; set; }
+    public DateOnly Birthdate { get; set; }
 }

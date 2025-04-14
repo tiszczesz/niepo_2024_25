@@ -1,8 +1,18 @@
-using System;
-using Microsoft.EntityFrameworkCore;
+## Używanie EF z Sqlite
 
-namespace cw3_ef_sqlite.Models;
+1. Zainstalować pakiety:
+   1. Microsoft.EntityFrameworkCore.Sqlite"
+   2. Microsoft.EntityFrameworkCore.Tools
+2. Utworzyć plik maanifest i zainstalować lokalnie ef
 
+```console
+dotnet new tool-manifest
+dotnet tool install dotnet-ef
+```
+
+3. Utworzyć Dbcontext dla aplikacji:
+
+```cs
 public class SchoolContext : DbContext
 {
     public SchoolContext(DbContextOptions<SchoolContext> options)
@@ -42,3 +52,16 @@ public class SchoolContext : DbContext
         );
     }
 }
+```
+
+4. Wykonać migrację po zbudowaniu projektu
+
+```console
+dotnet ef migrations add First
+```
+
+5. Utworzyć baże danych z migracji
+
+```console
+dotnet ef database update
+```
