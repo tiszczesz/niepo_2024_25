@@ -1,1 +1,23 @@
-﻿<h1>Index  School</h1>
+﻿@model List<Student>
+<h1>Lista studentów</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>Nr indeksu</th>
+            <th>Data urodzenia </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Student student in Model)
+        {
+            <tr>
+                <td>@student.Firstname</td>
+                <td>@student.Lastname</td>
+                <td>@student.IndexNumber</td>
+                <td>@student.Birthdate.ToString("yyyy-MM-dd")</td>
+            </tr>
+        }
+    </tbody>
+</table>

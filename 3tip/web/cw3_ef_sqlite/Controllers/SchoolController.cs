@@ -13,7 +13,8 @@ namespace cw3_ef_sqlite.Controllers
         // GET: SchoolController
         public ActionResult Index()
         {
-            return View();
+            var students = _context.Students.ToList();
+            return View(students);
         }
 
     }
