@@ -10,28 +10,38 @@ namespace cw10_cars.Controllers
         {
             _carsRepo = new CarsRepo(configuration);
         }
-   
+
         // GET: CarsRentalController
         public ActionResult Index()
         {
             return View();
         }
-        public IActionResult List(){
+        public IActionResult List()
+        {
             var cars = _carsRepo.GetAllCars();
             return View(cars);
         }
-        public IActionResult CarRent(int? id){
-            if(id==null){
+        public IActionResult CarRent(int? id)
+        {
+            if (id == null)
+            {
                 //powrot do listy gdy id==null
-               // return RedirectToAction("List");
+                // return RedirectToAction("List");
                 return RedirectToAction(nameof(List));
             }
             var car = _carsRepo.GetCarById(id.Value);
-            if(car==null){
+            if (car == null)
+            {
                 //powrot do listy gdy id nie istnieje
                 return RedirectToAction(nameof(List));
             }
-            return View(car);
+            CarUserViewModel carUser = new CarUserViewModel();
+            carUser.CarToRental = car;
+            return View(carUser);
+        }
+        public IActionResult PostCarRental()
+        {
+            return View();
         }
 
     }

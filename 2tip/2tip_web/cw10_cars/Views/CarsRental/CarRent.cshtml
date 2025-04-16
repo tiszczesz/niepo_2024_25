@@ -1,6 +1,29 @@
-﻿@model Car
+﻿@model CarUserViewModel
 <h1>Wypożyczenie samochodu</h1>
-<h3>Marka: @Model.Brand</h3>
-<h4>Model: @Model.Model</h4>
-<h5>Rocznik: @Model.Year</h5>
-<p>Kolor samochodu: @Model.Color stan: @Model.Condition</p>
+<h3>Marka: @Model.CarToRental?.Brand</h3>
+<h4>Model: @Model.CarToRental?.Model</h4>
+<h5>Rocznik: @Model.CarToRental?.Year</h5>
+<p>Kolor samochodu: @Model.CarToRental?.Color stan: @Model.CarToRental?.Condition</p>
+<hr />
+<h3>Podaj dane w celu wypożczenia samochodu</h3>
+
+<form action="PostCarRental" method="post">
+    <div class="line">
+        <label asp-for="@Model.User.UserName"></label>
+        <input asp-for="@Model.User.UserName" placeholder="Imię i nazwisko" />
+        <span class="error" asp-validation-for="@Model.User.UserName"></span>
+    </div>
+    <div class="line">
+        <label asp-for="@Model.User.Phone"></label>
+        <input asp-for="@Model.User.Phone" placeholder="telefon" />
+        <span class="error" asp-validation-for="@Model.User.Phone"></span>
+    </div>
+    <div class="line">
+        <label asp-for="@Model.User.DateRental"></label>
+        <input type="date" asp-for="@Model.User.DateRental" />
+        <span class="error" asp-validation-for="@Model.User.DateRental"></span>
+    </div>
+    <div class="line">
+        <input type="submit" value="Wypożycz" />
+    </div>
+</form>
