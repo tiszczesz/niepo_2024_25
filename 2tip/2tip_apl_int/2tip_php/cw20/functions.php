@@ -40,3 +40,12 @@ function carsToTable(array $data): string
     $html .= "</table>";
     return $html;
 }
+function getCarById(int $id): array | null {
+    $conn = getConnection(DB_NAME);
+    if ($conn == null) return null;
+    $sql = "SELECT * FROM samochody WHERE id = $id";
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+    $conn->close();
+    return $row;
+}
