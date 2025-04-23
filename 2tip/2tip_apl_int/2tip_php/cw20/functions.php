@@ -49,3 +49,16 @@ function getCarById(int $id): array | null {
     $conn->close();
     return $row;
 }
+function addOrder(array $data){
+    //czy tablica $data zawiera wszystkie wymagane pola
+    if(!isset($data['klient']) || !isset($data['phone']) || !isset($data['date']) || !isset($data['id'])) {
+        return false;
+    }
+    $conn = getConnection(DB_NAME);
+    if ($conn == null) return false;
+    $sql = "INSERT INTO zamowienia (Klient, telefon, dataZam, Samochody_id) "
+        ." VALUES ('{$data['klient']}', '{$data['phone']}', '{$data['date']}', {$data['id']})";
+    $result = $conn->query($sql);
+    $conn->close();
+    return $result; //zwraca true lub false
+}
