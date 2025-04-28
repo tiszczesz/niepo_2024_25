@@ -38,8 +38,41 @@ namespace cw3_ef_sqlite.Controllers
             return View();
         }
         public IActionResult DeleteStudent(int id){
-
+            //znajduje studenta o podanym id
+            var student = _context.Students.Find(id);
+            if(student != null){
+                //usuwa studenta z kontekstu
+                _context.Students.Remove(student);
+                //zapisuje zmiany w bazie danych
+                _context.SaveChanges();
+            }           
+        
             return RedirectToAction("Index");
+        }
+        //wyswietlenie formularza edytowania studenta
+        [HttpGet]
+        public IActionResult EditStudent(int id)
+        {
+            //znajduje studenta o podanym id
+            var student = _context.Students.Find(id);
+            if(student != null){
+                return View(student);
+            }
+            return RedirectToAction("Index");
+        }
+        //edytowanie studenta w bazie danych
+        [HttpPost]
+        public IActionResult EditStudent(Student student)
+        {
+            if(ModelState.IsValid){
+                //ustawia entity jako zmieniona
+                //aktualizuje w kontekście
+                _context.Students.Update(student);
+                //zapisuje zmiany w bazie danych
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(student);
         }
 
     }

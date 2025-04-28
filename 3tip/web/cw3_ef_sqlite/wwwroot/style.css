@@ -25,7 +25,8 @@ label {
   font-weight: bold;
 }
 .button {
-  margin: 10px;
+  margin: 0;
+  display: inline-block;
   padding: 5px 10px;
   background-color: #4caf50;
   color: white;
@@ -46,6 +47,6 @@ nav .menu a {
   border-radius: 5px;
 }
 nav .menu a:hover {
-    margin: 0;
+  margin: 0;
   background-color: #ddd;
 }

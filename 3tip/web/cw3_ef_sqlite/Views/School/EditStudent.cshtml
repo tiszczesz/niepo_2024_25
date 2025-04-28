@@ -1,9 +1,10 @@
 ﻿@model Student
 @{
-    ViewData["Title"] = "Dodaj studenta";
+    ViewData["Title"] = "Edycja studenta";
 }
-<h3>Dodawanie nowego studenta</h3>
-<form asp-action="AddStudent" method="post">
+<h3>Edycja studenta</h3>
+<form asp-action="EditStudent" method="post">
+    <input type="hidden" asp-for="Id" />
     <div class="line">
         <label asp-for="Firstname"></label>
         <input asp-for="Firstname" />
@@ -26,7 +27,8 @@
     </div>
     <div class="line">
         <label></label>
-        <input type="submit" value="Dodaj studenta" class="button" />
+        <input type="submit" value="Zapisz zmiany" class="button" />
         <a class="button" asp-action="Index">Powrót do listy studentów</a>
     </div>
 </form>
+
