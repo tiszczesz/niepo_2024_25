@@ -1,0 +1,30 @@
+﻿@model Student
+
+<h3>Dodawanie nowego studenta</h3>
+<form asp-action="AddStudent" method="post">
+    <div class="line">
+        <label asp-for="Firstname"></label>
+        <input asp-for="Firstname" />
+        <span asp-validation-for="Firstname" class="error"></span>
+    </div>
+        <div class="line"></div>
+        <label asp-for="Lastname"></label>
+        <input asp-for="Lastname" />
+        <span asp-validation-for="Lastname" class="error"></span>
+    </div>
+    <div class="line"></div>
+        <label asp-for="IndexNumber"></label>
+        <input asp-for="IndexNumber" />
+        <span asp-validation-for="IndexNumber" class="error"></span>
+    </div>
+    <div class="line"></div>
+        <label asp-for="Birthdate"></label>
+        <input asp-for="Birthdate" type="date" />
+        <span asp-validation-for="Birthdate" class="error"></span>
+    </div>
+    <div class="line"></div>
+    <label></label>
+        <input type="submit" value="Dodaj studenta" class="button" />
+        <a class="button" asp-action="Index">Powrót do listy studentów</a>
+    </div>
+</form>

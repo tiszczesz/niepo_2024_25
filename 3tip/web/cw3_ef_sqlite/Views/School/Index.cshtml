@@ -7,6 +7,7 @@
             <th>Nazwisko</th>
             <th>Nr indeksu</th>
             <th>Data urodzenia </th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -17,6 +18,10 @@
                 <td>@student.Lastname</td>
                 <td>@student.IndexNumber</td>
                 <td>@student.Birthdate.ToString("yyyy-MM-dd")</td>
+                <td>
+                    <a class="button" asp-action="EditStudent" asp-route-id="@student.Id">Edytuj</a>
+                    <a class="button" asp-action="DeleteStudent" asp-route-id="@student.Id">Usuń</a>
+                </td>
             </tr>
         }
     </tbody>
