@@ -41,8 +41,8 @@ namespace cw10_cars.Controllers
             carUser.CarToRental = car;
             return View(carUser);
         }
-        [HttpPost]
-        public IActionResult PostCarRental(CarUserViewModel carUser)
+        
+        public IActionResult PostCarRental()
         {
             if (ModelState.IsValid)
             {
