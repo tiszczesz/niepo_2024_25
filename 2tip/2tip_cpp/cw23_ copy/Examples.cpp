@@ -22,12 +22,13 @@ struct First {
 
 struct Second {
 	int* pa;
-	std::string text;
-	Second() :pa(new int(0)), text("Hello") {
+	std::string* ptext;
+	Second() :pa(new int(0)), ptext( new std::string("Hello")) {
 		/*pa = new int(0);
 		text = "Hello";*/
 	}
-	Second(int a, std::string text) :pa(new int(a)), text(text) {
+	Second(int a, std::string text) :pa(new int(a)),
+	ptext(new std::string(text)) {
 		/*this->pa = new int(a);
 		this->text = text;*/
 	}
@@ -39,15 +40,17 @@ struct Second {
 	//}
 	//utowrzenie nowego pa do ktorego przypisujemy wartosc z obj
 //konstruktor kopiujacy napisany przez nas głebokie kopiowanie
-	Second(const Second& obj) :pa(new int(*obj.pa)), text(obj.text) {
+	Second(const Second& obj) :pa(new int(*obj.pa)),
+	   ptext(new std::string(*obj.ptext)) {
 		/*this->pa = new int(*obj.pa);
 		this->text = obj.text;*/
 	}
 	void Display() {
 		std::cout << "a = " << *pa << std::endl;
-		std::cout << "text = " << text << std::endl;
+		std::cout << "text = " << *ptext << std::endl;
 	}
 	~Second() {
 		delete pa;
+		delete ptext;
 	}
 };
