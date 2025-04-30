@@ -47,7 +47,7 @@ struct Second {
 		std::cout << "a = " << *pa << std::endl;
 		std::cout << "text = " << text << std::endl;
 	}
-	/*~Second() {
+	~Second() {
 		delete pa;
-	}*/
+	}
 };
