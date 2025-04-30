@@ -9,6 +9,7 @@
 
 <form asp-action="PostCarRental" method="post">
     <div class="line">
+        <input type="hidden" asp-for="@Model.User.CarId" value="@Model.CarToRental.Id" />
         <label asp-for="@Model.User.UserName"></label>
         <input asp-for="@Model.User.UserName" placeholder="Imię i nazwisko" />
         <span class="error" asp-validation-for="@Model.User.UserName"></span>
