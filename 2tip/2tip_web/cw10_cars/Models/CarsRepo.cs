@@ -55,4 +55,9 @@ public class CarsRepo
         conn.Close();
         return car;
     }
+
+    public void AddCarRental(User user)
+    {
+        throw new NotImplementedException();
+    }
 }

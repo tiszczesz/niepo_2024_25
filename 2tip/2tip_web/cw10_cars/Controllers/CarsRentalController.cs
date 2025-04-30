@@ -47,6 +47,7 @@ namespace cw10_cars.Controllers
         {     
             if(ModelState.IsValid){
                 //zapisanie do bazy danych do tabelki zamowienie
+                _carsRepo.AddCarRental(carUser.User);
                 return RedirectToAction(nameof(List));
             }
             //jesli niepoprawne dane to zwracamy do widoku
