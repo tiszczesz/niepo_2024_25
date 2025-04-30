@@ -21,6 +21,8 @@ namespace cw10_cars.Controllers
             var cars = _carsRepo.GetAllCars();
             return View(cars);
         }
+
+        [HttpGet]
         public IActionResult CarRent(int? id)
         {
             if (id == null)
@@ -39,8 +41,16 @@ namespace cw10_cars.Controllers
             carUser.CarToRental = car;
             return View(carUser);
         }
-        public IActionResult PostCarRental()
+        [HttpPost]
+        public IActionResult PostCarRental(CarUserViewModel carUser)
         {
+            if (ModelState.IsValid)
+            {
+               
+                return RedirectToAction(nameof(List));
+            }
+            //return View("CarRent", carUser);      
+        
             return View();
         }
 

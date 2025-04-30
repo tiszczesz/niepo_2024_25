@@ -7,7 +7,7 @@
 <hr />
 <h3>Podaj dane w celu wypożczenia samochodu</h3>
 
-<form action="PostCarRental" method="post">
+<form asp-action="PostCarRental" method="post">
     <div class="line">
         <label asp-for="@Model.User.UserName"></label>
         <input asp-for="@Model.User.UserName" placeholder="Imię i nazwisko" />
