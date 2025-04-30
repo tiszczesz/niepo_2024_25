@@ -58,6 +58,16 @@ public class CarsRepo
 
     public void AddCarRental(User user)
     {
-        throw new NotImplementedException();
+        using MySqlConnection conn = new(_connectionString);
+        using MySqlCommand cmd = conn.CreateCommand();
+        cmd.CommandText = "INSERT INTO zamowienia (Klient, telefon, dataZam, Samochody_id) "
+          + " VALUES (@name, @phone, @date, @carId)";
+        cmd.Parameters.AddWithValue("@name", user.UserName);
+        cmd.Parameters.AddWithValue("@phone", user.Phone);
+        cmd.Parameters.AddWithValue("@date", user.DateRental.ToString("yyyy-MM-dd"));
+        cmd.Parameters.AddWithValue("@carId", user.CarId);
+        conn.Open();
+        cmd.ExecuteNonQuery();
+        conn.Close();
     }
 }
