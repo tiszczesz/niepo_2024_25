@@ -46,7 +46,7 @@ namespace cw10_cars.Controllers
         public IActionResult PostCarRental(CarUserViewModel carUser)
         {     
             if(ModelState.IsValid){
-                //zapisanie do bazy danych
+                //zapisanie do bazy danych do tabelki zamowienie
                 return RedirectToAction(nameof(List));
             }
             //jesli niepoprawne dane to zwracamy do widoku
