@@ -1,0 +1,10 @@
+﻿@model List<string>
+@{
+    ViewData["Title"] = "Widoki częściowe";
+}
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>  @item </li>
+    }
+</ul>

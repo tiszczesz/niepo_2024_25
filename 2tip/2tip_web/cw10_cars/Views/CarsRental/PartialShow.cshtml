@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <partial name="_HeaderPartial"  />
+        @* @Html.Partial("_HeaderPartial") *@
+    </header>
+    <main>
+        <h3>Zaartość strony</h3>
+        <partial name="_MainPartial"/>
+    </main>
+    <footer>
+        @{ Html.RenderPartial("_FooterPartial"); }
+        <partial name="_FooterPartial" />
+    </footer>
+</body>
+
+</html>

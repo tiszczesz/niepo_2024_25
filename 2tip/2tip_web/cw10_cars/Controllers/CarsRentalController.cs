@@ -60,6 +60,19 @@ namespace cw10_cars.Controllers
         {
             return View();
         }
+
+        public IActionResult PartialShow()
+        {
+            var list = new List<string>(){
+                "Zamówienie 1",
+                "Zamówienie 2",
+                "Zamówienie 3",
+                "Zamówienie 4",
+                "Zamówienie 5"
+            };
+            // return PartialView("_MainPartial",list);
+            return View(list);
+        }
         
         
 
