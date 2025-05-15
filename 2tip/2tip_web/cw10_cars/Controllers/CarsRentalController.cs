@@ -41,19 +41,24 @@ namespace cw10_cars.Controllers
             carUser.CarToRental = car;
             return View(carUser);
         }
-        
+
         [HttpPost]
         public IActionResult PostCarRental(CarUserViewModel carUser)
-        {     
-            if(ModelState.IsValid){
+        {
+            if (ModelState.IsValid)
+            {
                 //zapisanie do bazy danych do tabelki zamowienie
                 _carsRepo.AddCarRental(carUser.User);
-                return RedirectToAction(nameof(List));
+                return RedirectToAction(nameof(ShowallOrders));
             }
             //jesli niepoprawne dane to zwracamy do widoku
             var car = _carsRepo.GetCarById(carUser.User.CarId);
             carUser.CarToRental = car;
             return View("CarRent", carUser);
+        }
+        public IActionResult ShowallOrders()
+        {
+            return View();
         }
         
         
