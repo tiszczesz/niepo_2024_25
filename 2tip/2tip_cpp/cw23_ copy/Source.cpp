@@ -21,5 +21,14 @@ int main() {
 	*obj3.pa = 100;
 	obj3.Display();
 	obj4.Display();
+	cout << "================= tttttttttttt =======\n";
+	//Inny sposob tworzenia obiektu
+	Second obj5;
+	obj5 = obj3;
+	obj3.Display();
+	obj5.Display();
+	*obj5.pa = 9900;
+	obj3.Display();
+	obj5.Display();
 	return 0;
 }

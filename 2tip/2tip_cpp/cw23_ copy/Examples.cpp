@@ -53,4 +53,14 @@ struct Second {
 		delete pa;
 		delete ptext;
 	}
+	//operator przypisania
+	Second& operator=(const Second& obj) {
+		if (this != &obj) {
+			delete pa;
+			delete ptext;
+			pa = new int(*obj.pa);
+			ptext = new std::string(*obj.ptext);
+		}
+		return *this;
+	}
 };
