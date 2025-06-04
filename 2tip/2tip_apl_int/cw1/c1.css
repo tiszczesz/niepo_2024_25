@@ -1,0 +1,30 @@
+:root {
+  --my-color: #50c054;
+}
+
+.colors {
+  .item {
+    height: 100px;
+    width: 100px;
+    border: 1px black solid;
+    margin: 10px;
+    &:nth-child(1) {
+      background-color: var(--my-color);
+    }
+    &:nth-child(2) {
+      background-color: hsl(from var(--my-color) h s 80%);
+    }
+    &:nth-child(3) {
+      background-color: hsl(from var(--my-color) h s 20%);
+    }
+    &:nth-child(4) {
+      background-color: rgb(from var(--my-color) 100 g b);
+    }
+    &:nth-child(5) {
+      background-color: rgb(from var(--my-color) calc(200 - r) g calc(255 - g));
+    }
+    &:nth-child(6) {
+      background-color: rgb(from var(--my-color) 100 g 20);
+    }
+  }
+}
