@@ -25,7 +25,10 @@ function App() {
   return (
     <>
       <h2 className='header'>Hello</h2>
-      <h5>Czy fajnie było na praktykach?</h5>
+      <h5
+        onClick={(event)=> console.log((event.currentTarget).innerHTML)}
+        style={{ cursor: "pointer", backgroundColor: "green" }}
+      >Czy fajnie było na praktykach?</h5>
       {/* <div className='d-flex gap-2 p-2'>
         <button onClick={()=>console.log("TAK")} className='btn btn-success w-50'>TAK</button>
         <button onClick={()=>console.log("NIE")} className='btn btn-success w-50'>NIE</button>
