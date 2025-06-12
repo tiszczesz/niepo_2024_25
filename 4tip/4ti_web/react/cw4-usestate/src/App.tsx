@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css'
-import { useState } from 'react';
+import { useState, type ChangeEvent } from 'react';
 
 
 function App() {
@@ -9,6 +9,11 @@ function App() {
   // Stan komponentu
   const [text,setText] = useState('stan początkowy122');
   const [number1,setNumber1] = useState('0');
+  function handleNumber(e: ChangeEvent<HTMLInputElement>): void {
+    //tutuj możemy zmienić stan komponentu
+    //walidacja danych wejściowych
+  }
+
   // text zmieniany jest przez input
   // stan komponentu jest aktualizowany przez funkcję setText
   // text = "ffffff"; // To jest niepoprawne, ponieważ nie można bezpośrednio modyfikować stanu w ten sposób
@@ -19,7 +24,7 @@ function App() {
      <h1>Praca ze stanem komponentu</h1>
      <input onChange={(e)=>{setText(e.target.value)}} type="text"className='form-control' value={text} />
     {text.toUpperCase()}
-     <input onChange={(e)=>{setNumber1(e.target.value)}} 
+     <input onChange={(e)=>handleNumber(e)} 
      type="number"className='form-control' value={number1} />
     {number1}
     </div>
