@@ -15,7 +15,8 @@ namespace cw11_VS2022.Controllers
         }
 
         public IActionResult List() {
-            return View();
+            var list = _repo.GetAll();
+            return View(list);
         }
     }
 }
